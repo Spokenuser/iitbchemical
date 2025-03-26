@@ -1,0 +1,21 @@
+global-styling:
+  version: VERSION
+  js: 
+    js/popper.min.js: { weight: -49 }
+    js/barrio.js: {}
+    js/custom-script.js: {}
+    assets/owl-library/owl.carousel.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js: { type: external }
+    /libraries/slick/slick/slick.min.js: {}
+  css:
+    component:
+      css/bootstrap.min.css: {}
+      css/style.css: {}
+      css/theme-style.css: {}
+      assets/owl-library/owl.theme.default.min.css: {}
+      assets/owl-library/owl.carousel.min.css: {}
+      https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupal

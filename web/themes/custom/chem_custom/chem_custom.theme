@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function chem_custom_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+}
+function chem_custom_preprocess_page(&$variables) {
+  $about_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_homepageaboutchemical');
+  $footer_resource_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_resources');
+  $footer_contact_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footercontact');
+  $social_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_socialmedialinks');
+  $footer_activities_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footeractivities');
+  $footer_bottom = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footer');
+  $footer_govlogo = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footergovlogo');
+  $language_switch = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_languageswitcher');
+  if ($about_block) {
+    $variables['homepage_about_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($about_block);
+  }
+  if ($social_block) {
+    $variables['social_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($social_block);
+  }
+  if ($footer_contact_block) {
+    $variables['footer_contact_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_contact_block);
+  }
+  if ($footer_activities_block) {
+    $variables['footer_activities_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_activities_block);
+  }
+  if ($footer_resource_block) {
+    $variables['footer_resource_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_resource_block);
+  }
+  if ($footer_bottom) {
+    $variables['footer_bottom'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_bottom);
+  }
+  if ($footer_govlogo) {
+    $variables['footer_govlogo'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_govlogo);
+  }
+  if ($language_switch) {
+    $variables['language_switch'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($language_switch);
+  }
+}

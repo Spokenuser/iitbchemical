@@ -1,0 +1,84 @@
+@mixin mymedia($minwidth) {
+    @media (min-width: #{$minwidth}) {
+        @content;
+    }
+}
+@mixin unorder-list {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+@mixin padding-left-right {
+    padding-left: 0px;
+    padding-right: 0px;
+    @include mymedia(1024px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @include mymedia(1360px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include mymedia(1680px) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@mixin padding-top-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include mymedia(1360px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include mymedia(1600px) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+@mixin section-heading($color, $align, $mb, $border-color) {
+    text-align: $align;
+    margin-bottom: $mb;
+    color: $color;
+    border-left: 5px solid;
+    border-color: $border-color;
+    padding-left: 15px;
+    font-size: 2rem;
+    font-family: f.$roboto-medium;
+    @include mymedia(1024px) {
+        font-size: 2.7rem;
+    }
+    @include mymedia(1360px) {
+        font-size: 3rem;
+    }
+    @include mymedia(1600px) {
+        font-size: 3.5rem;
+    }
+}
+@mixin grid($column) {
+    grid-template-columns: repeat($column, 1fr);
+    display: grid;
+}
+body {
+    font-family: f.$roboto-regular;
+    font-size: 1rem;
+    @include mymedia(2000px) {
+        font-size: 1.3rem;
+    }
+}
+.top-bg-section {
+    background-image: url(../images/top-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @include padding-left-right();
+    background-repeat: no-repeat;
+}
+
+.pagination {
+    margin-top: 40px;
+}
+.container-fluid {
+    max-width: 1920px;
+}
+

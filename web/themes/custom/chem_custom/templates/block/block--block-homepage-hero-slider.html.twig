@@ -1,0 +1,79 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* Available variables:
+* - plugin_id: The ID of the block implementation.
+* - label: The configured label of the block if visible.
+* - configuration: A list of the block's configuration values.
+* - label: The configured label for the block.
+* - label_display: The display settings for the label.
+* - provider: The module or other provider that provided this block plugin.
+* - Block plugin specific settings will also be stored here.
+* - content: The content of this block.
+* - attributes: array of HTML attributes populated by modules, intended to
+* be added to the main container tag of this template.
+* - id: A valid HTML ID and guaranteed unique.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main content
+* tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'hero-slider',
+  ]
+  %}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      {% for slide in content.field_slide['#items'] %}
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index0 }}"
+        class="{{ loop.first ? 'active' : '' }}" aria-label="Slide {{ loop.index }}"></button>
+      {% endfor %}
+    </div>
+
+    <div class="carousel-inner">
+      {% for slide in content.field_slide['#items'] %}
+      <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+        {% set image_url = slide.entity.field_image | file_url %}
+        {% set title = slide.entity.field_title.value %}
+        {% set description = slide.entity.field_description.value %}
+        {% set link = slide.entity.field_link.0.uri %}
+
+        <img src="{{ image_url }}" class="d-block w-100" alt="{{ title }}">
+        <div class="carousel-caption">
+          <h2>{{ title }}</h2>
+          <div class="desc">{{ description }}</div>
+          {% if link %}
+          <div class="action-button">
+            <a href="{{ link }}" class="btn-know-more">Know More</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endblock %}
+</div>

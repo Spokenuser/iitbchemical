@@ -1,0 +1,77 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* Available variables:
+* - plugin_id: The ID of the block implementation.
+* - label: The configured label of the block if visible.
+* - configuration: A list of the block's configuration values.
+* - label: The configured label for the block.
+* - label_display: The display settings for the label.
+* - provider: The module or other provider that provided this block plugin.
+* - Block plugin specific settings will also be stored here.
+* - content: The content of this block.
+* - attributes: array of HTML attributes populated by modules, intended to
+* be added to the main container tag of this template.
+* - id: A valid HTML ID and guaranteed unique.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main content
+* tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{%
+set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+]
+%}
+{% set title = content.field_title.0['#context'].value %}
+{% set body = content.body|render|striptags|raw %}
+{% set links = content.field_more_link|default([]) %}
+{% set video = content.field_video.0['#media'] | file_url %}
+<div class="about-section">
+  <div class="about-desc">
+    <h2>{{ title }}
+      <hr>
+    </h2>
+    <p>{{ body }}</p>
+    <div class="bottom-action">
+      {% for item in links['#items'] %}
+      {% set link_url = item.entity.field_link.0.uri %}
+      {% set link_title = item.entity.field_link.0.title|default('Know More') %}
+      {% set base_url = url('<front>')['#markup'] %}
+      {% if link_url starts with 'internal:' or link_url starts with 'entity:node/' or link_url starts with base_url %}
+       {% set is_external = '0' %}
+      {% else %}
+        {% set is_external = '1' %}
+      {% endif %}
+      <a href="{{ link_url }}" class="btn-know-more" {% if is_external %}target="_blank"{% endif %}>
+        <span class="icon"><i class="bi bi-arrow-right-short"></i></span>
+        <span class="text">{{ link_title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="about-video">
+    <video autoplay muted loop id="heroVideo" poster="{{ video }}">
+      <source src="{{ video }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+      <a href="javascript:void(0);" id="playPauseBtn" class="btn-pay-icon">
+        <i class="bi bi-pause"></i>
+      </a>
+    </div>
+  </div>
+</div>

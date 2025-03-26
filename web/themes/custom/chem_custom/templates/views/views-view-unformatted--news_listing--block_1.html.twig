@@ -1,0 +1,41 @@
+{#
+  /**
+   * @file
+   * Theme override to display a view of unformatted rows.
+   *
+   * Available variables:
+   * - title: The title of this group of rows. May be empty.
+   * - rows: A list of the view's row items.
+   *   - attributes: The row's HTML attributes.
+   *   - content: The row's content.
+   * - view: The view object.
+   * - default_row_class: A flag indicating whether default classes should be
+   *   used on rows.
+   *
+   * @see template_preprocess_views_view_unformatted()
+   */
+  #}
+  {% for row in rows %}
+  <div class="news-item">
+    <div class="news-image">
+      <img class="img-fluid" src="{{ row.content['#row']._entity.field_featured_image | file_url }}" alt="">
+    </div>
+    <div class="news-content">
+      <div class="news-date">
+        {{ row.content['#row']._entity.field_date.value|date('d/m/Y') }}
+      </div>
+      <div class="news-title">
+        {{ row.content['#row']._entity.title.value }}
+      </div>
+      <div class="news-body">
+        {{ row.content['#row']._entity.body.value | striptags | slice(0, 600) ~ '...' }}
+      </div>
+      <div class="news-readmore">
+        <a href="{{ path('entity.node.canonical', {'node': row.content['#row']._entity.nid[0].value}) }}">Read More</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+
+  
