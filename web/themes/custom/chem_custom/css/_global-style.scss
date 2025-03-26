@@ -68,10 +68,11 @@ body {
     }
 }
 .top-bg-section {
-    display: none;
+    background-image: url(../images/top-bg.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     @include padding-left-right();
+    background-repeat: no-repeat;
 }
 
 .pagination {

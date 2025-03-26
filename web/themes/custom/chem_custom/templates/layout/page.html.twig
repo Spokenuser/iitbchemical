@@ -69,7 +69,9 @@
 #}
 <div id="page-wrapper">
   <div id="page">
-    <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
+  <section class="top-bg-section">
+    <header id="header" class="page-front-header" role="banner" aria-label="{{ 'Site header'|t}}">
+      <div class="container-fluid">
       {% block head %}
       {% if page.secondary_menu or page.top_header or page.top_header_form %}
       <section class="secondary-menu-section reverse-color">
@@ -95,6 +97,9 @@
         </div>
       </section>
       {% endif %}
+
+
+      {# 
       <section class="logo-search-section">
         <div class="container-fluid">
           <div class="logo-box aos-init aos-animate" data-aos="fade-right" data-aos-duration="2000">
@@ -111,15 +116,45 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> 
       <section class="navigation-section reverse-color">
         <div class="container-fluid">
           <a href="{{ front_page }}" class="home-menu"><i class="bi bi-house-door"></i></a>
           {{ page.primary_menu }}
         </div>
-      </section>
+      </section> #}
+
+
+     
+          <a href="{{ front_page }}" class="logo"><img src="/themes/custom/chem_custom/assets/images/logo.svg"
+              class="img-fluid" alt=""></a>
+          <div class="nav-container">
+            <div class="input-group mt-3" style="">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+              <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+            </div>
+            <div class="navigation-box">
+              <a href="{{ front_page }}" class="home-icon"><i class="bi bi-house-door"></i></a>
+              <nav id="navigation1" class="navigation navigation-landscape">
+                <div class="nav-header">
+                  <div class="nav-toggle"></div>
+                </div>
+                <div class="nav-menus-wrapper" style="transition-property: none;"><span
+                    class="nav-menus-wrapper-close-button">✕</span>
+                  {{ page.primary_menu }}
+                </div>
+                <div class="clearfix"></div>
+              </nav>
+            </div>
+
+          </div>
+      
+
       {% endblock %}
+        </div>
     </header>
+    </section>
     {% if page.highlighted %}
     <div class="highlighted">
       <aside class="{{ container }} section clearfix" role="complementary">
@@ -127,18 +162,21 @@
       </aside>
     </div>
     {% endif %}
-    <section class="inside-banner">
-      <div class="inside-banner-title">
+    <section class="inside-banner" style="background-image: url('/themes/custom/chem_custom/images/faculty-banner.svg');">
+     
         <div class="container-fluid">
+        <div class="inside-heading-bradcumb">
+         <h2>{{ node.label }}</h2>
           {% if page.breadcrumb %}
           {{ page.breadcrumb }}
           {% else %}
           {# <div class="mt-5"></div> #} <!-- Was included for a space if the breadcrumb is not there for a page -->
           {% endif %}
-          <h2>{{ node.label }}</h2>
+         
+        </div>          
         </div>
-      </div>
-      <img src="/sites/default/files/2025-03/inside-banner%20%281%29.jpg" class="img-fluid" alt>
+     
+     
     </section>
     {% if page.featured_top %}
     {% block featured %}
@@ -160,7 +198,7 @@
             </aside>
         </div>
         {% endif %}
-        <main class="page-body">
+        <main class="page-body inside-body-start">
           <section class="section container-fluid">
             <a id="main-content" tabindex="-1"></a>
             {{ page.content }}

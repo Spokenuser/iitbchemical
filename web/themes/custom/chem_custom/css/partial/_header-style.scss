@@ -76,7 +76,15 @@ header {
         }
 
         .navbar-nav{
+            gap: 25px;
             flex-direction: row !important;  
+
+            li{
+                padding: 10px 0px;
+                a{
+                    color: #fff;
+                }
+            }
         }
     }
     &.sticky{

@@ -54,21 +54,28 @@
         @include section-heading(c.$iitbc-white, left, 25px, c.$iitbc-secondary-color);
     }
     .container-fluid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        @include mymedia(1024px) {
-            flex-direction: row;
-            gap: 70px;
-        }
-        .desc {
-            flex: 1;
-        }
-        .about-img {
+       
+        .left_text_with_right_image{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             @include mymedia(1024px) {
-                width: 550px;
+                flex-direction: row;
+                gap: 70px;
+            }
+    
+            .desc {
+                flex: 1;
+            }
+            .about-img {
+                @include mymedia(1024px) {
+                    width: 550px;
+                }
             }
         }
+
+
+       
     }
 }
 
@@ -88,27 +95,31 @@
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 50px;
         }
-        .item {
+        .block-layout-builder {
             &:nth-child(1) {
                 display: flex;
                 align-items: center;
+                .content {
+                    border-radius: 0px;
+                }
                 h2 {
                     @include section-heading(c.$iitbc-primary-color, left, 0px, c.$iitbc-secondary-color);
                 }
             }
-            .card {
+            .content {
                 border-radius: 10px;
                 border: 0px;
                 overflow: hidden;
-                .img-box {
+                .field--name-field-image{
                     overflow: hidden;
+                    margin-bottom: 2px;
                     img {
                         width: 100%;
                         transition: all 0.5s;
                         filter: grayscale(80%);
                     }
                 }
-                .card-footer {
+                .field--name-field-title{
                     background-color: c.$iitbc-primary-color;
                     color: c.$iitbc-white;
                     padding: 15px;
@@ -120,23 +131,18 @@
                     z-index: 10;
                     overflow: hidden; // Prevents overflow outside the card footer
                     transition: all 0.5s ease-in-out;
+                    height: 93px;
                 }
             }
             &:hover {
-                .img-box {
+                .field--name-field-image {
                     img {
                         transform: scale(1.2);
+                        filter: grayscale(0);
                     }
                 }
-                .card{
-                    .img-box{
-
-                        img{
-                            filter: grayscale(0);
-                        }
-                    }
-                }
-                .card-footer {
+                
+                .field--name-field-title {
                     color: c.$iist-black;
                     background-color: c.$iitbc-secondary-color;
                 }
@@ -152,13 +158,21 @@
     h2 {
         @include section-heading(c.$iitbc-white, left, 25px, c.$iitbc-secondary-color);
     }
+
+    .block-content-image_with_icon_and_title{
+        background-color: transparent;
+        border: 0px;
+    }
     .academic-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 15px;
-        @include mymedia(1024px) {
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 50px;
+      
+        .field--name-field-image-icon-card{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 15px;
+            @include mymedia(1024px) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 50px;
+            }
         }
         .item {
             border-radius: 15px;
@@ -236,13 +250,20 @@
         }
     }
 }
-.events-section {
+.events-section-heading{
     @include padding-left-right();
     @include padding-top-bottom();
+    padding-bottom: 0px !important;
 
     h2 {
         @include section-heading(c.$iitbc-primary-color, left, 40px, c.$iitbc-secondary-color);
     }
+}
+.events-section {
+    @include padding-left-right();
+    @include padding-top-bottom();
+    padding-top: 0px !important;
+   
     .events-grid {
         display: flex;
         flex-direction: column;
@@ -251,45 +272,70 @@
             flex-direction: row;
             gap: 70px;
         }
+       
+
         .list-annocuement {
             flex: 1;
-            ul {
-                @include unorder-list();
-                li {
-                    padding: 23px 0px;
-                    display: flex;
-                    font-size: 1rem;
-                    gap: 15px;
-                    border-bottom: 1px solid #ccc;
-                    flex-direction: column;
-                    @include mymedia(600px) {
-                        flex-direction: row;
-                    }
-                    &:first-child {
-                        padding-top: 0px;
-                    }
-                    &:last-child {
-                        border-bottom: 0px;
-                        padding-bottom: 0px;
-                    }
-                    .img-box {
-                        img {
-                            width: 100%;
-                        }
+            .views-row{
+                padding: 23px 0px;
+                border-bottom: 1px solid #ccc;
+                &:first-child{
+                    padding-top: 0px;
+                }
+                &:last-child{
+                    border-bottom: 0px;
+                    padding-bottom: 0px;
+                }
 
-                        @include mymedia(600px) {
-                            width: 150px;
+                &:hover{
+                    .info{
+                        h6{
+                            a{
+                                color: c.$iitbc-primary-color;
+                            }
                         }
                     }
-                    .info {
-                        flex: 1;
-                        h6 {
-                            font-size: 1.3rem;
+                }
+            }
+            .field-content {
+               
+                display: flex;
+                font-size: 1rem;
+                gap: 15px;
+            
+                flex-direction: column;
+                @include mymedia(600px) {
+                    flex-direction: row;
+                }
+               
+                .img-box {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    @include mymedia(600px) {
+                        width: 150px;
+                    }
+                }
+                .info {
+                    flex: 1;
+                    h6 {
+                        font-size: 1.3rem;
+                        a{
+                            color: inherit;
+                            text-decoration: none;
                         }
-                        span {
-                            font-size: 0.9rem;
-                            color: #999;
+                    }
+                    .desc{
+                        p{
+                            margin-bottom: 5px;
                         }
+                    }
+                    span {
+                        font-size: 0.9rem;
+                        color: #999;
                     }
                 }
             }
@@ -318,24 +364,28 @@
                         border-bottom: 0px;
                         padding-bottom: 0px;
                     }
-                    h5 {
+                    .views-field-title {
                         color: c.$iitbc-white;
                         font-size: 1.1rem;
+
                         @include mymedia(768px) {
                             font-size: 1.5rem;
                         }
+                       span{
+                        font-style: normal;
                         a {
                             color: c.$iitbc-white;
                             transition: all 0.5s;
                             text-decoration: none;
                         }
+                       }
                     }
-                    span {
+                    .views-field-field-event-date {
                         color: #ccc;
                         font-style: italic;
                     }
                     &:hover {
-                        h5 {
+                        .views-field-title  {
                             a {
                                 color: c.$iitbc-secondary-color;
                             }
@@ -346,14 +396,22 @@
         }
     }
 
-    .research-slider {
-        margin-top: 70px;
+    
+}
+
+
+.research-slider-section{
+    @include padding-left-right();
+    @include padding-top-bottom();
+
+    .slick--view--homepage-research-slider{
+   
         .item {
             .img-box {
                 position: relative;
                 border-radius: 15px;
                 overflow: hidden;
-
+    
                 img {
                     transition: all 0.5s;
                 }
@@ -376,11 +434,11 @@
                 }
             }
         }
-
+    
         .owl-prev,
         .owl-next {
             position: relative;
-
+    
             background: rgba(0, 0, 0, 0.5); /* Optional: Add background */
             color: white; /* Optional: Change arrow color */
             border-radius: 50%;
@@ -392,20 +450,20 @@
             span {
                 font-size: 2rem;
             }
-
+    
             @include mymedia(1024px) {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
             }
         }
-
+    
         .owl-prev {
             @include mymedia(1024px) {
                 left: -50px; /* Adjust distance from the left */
             }
         }
-
+    
         .owl-next {
             @include mymedia(1024px) {
                 right: -50px; /* Adjust distance from the right */
@@ -417,6 +475,10 @@
         }
     }
 }
+
+
+
+
 .collaborations-section {
     @include padding-left-right();
     @include padding-top-bottom();
