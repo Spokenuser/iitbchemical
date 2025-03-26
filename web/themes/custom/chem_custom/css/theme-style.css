@@ -1974,7 +1974,7 @@ header.sticky {
     font-size: 3.5rem;
   }
 }
-.collaborations-section .container-fluid .collaborations-logo .logo-grid {
+.collaborations-section .container-fluid .collaborations-logo .field--name-field-icon {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
@@ -2653,6 +2653,8 @@ footer .container-fluid .item .footer-link ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 footer .container-fluid .item .footer-link ul li {
   padding: 5px 0px;
@@ -2660,6 +2662,7 @@ footer .container-fluid .item .footer-link ul li {
 footer .container-fluid .item .footer-link ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 0px;
 }
 footer .container-fluid .item .footer-link ul li:hover a {
   color: rgb(192, 224, 89);
@@ -2692,5 +2695,5 @@ footer .container-fluid .item:nth-child(3) .social-links ul li {
 }
 footer .container-fluid .item:nth-child(3) .social-links ul li a {
   color: rgb(192, 224, 89);
-  font-size: 2rem;
+  font-size: 1rem;
 }/*# sourceMappingURL=theme-style.css.map */

@@ -20,11 +20,14 @@ footer{
             .footer-link{
                 ul{
                     @include unorder-list();
+                    display: flex ;
+                        flex-direction: column;
                     li{
                         padding: 5px 0px;
                         a{
                             color: #fff;
                             text-decoration: none;
+                            padding: 0px;
                         }
                         &:hover{
                            a{
@@ -61,7 +64,7 @@ footer{
                             padding: 0px;
                             a{
                                 color: c.$iitbc-secondary-color;
-                                font-size: 2rem;
+                                font-size: 1rem;
                             }
                         }
                     }

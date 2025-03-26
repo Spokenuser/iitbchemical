@@ -508,7 +508,7 @@
             h2 {
                 @include section-heading(c.$iitbc-primary-color, left, 25px, c.$iitbc-secondary-color);
             }
-            .logo-grid {
+            .field--name-field-icon{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 15px;
