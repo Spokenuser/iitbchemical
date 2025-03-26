@@ -2680,6 +2680,16 @@ footer .container-fluid .item:nth-child(1) .contact-info-list ul li {
 footer .container-fluid .item:nth-child(1) .contact-info-list ul li i {
   color: rgb(192, 224, 89);
 }
+footer .container-fluid .item:nth-child(1) .contact-info-list ul li:nth-child(2)::before {
+  content: "\f5b4";
+  color: rgb(192, 224, 89);
+  font-family: bootstrap-icons !important;
+}
+footer .container-fluid .item:nth-child(1) .contact-info-list ul li:nth-child(3)::before {
+  content: "\f32f";
+  font-family: bootstrap-icons !important;
+  color: rgb(192, 224, 89);
+}
 footer .container-fluid .item:nth-child(3) .social-links {
   margin-top: 20px;
 }

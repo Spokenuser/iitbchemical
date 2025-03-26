@@ -49,6 +49,21 @@ footer{
                             i{
                                 color: c.$iitbc-secondary-color;
                             }
+
+                            &:nth-child(2){
+                                &::before{
+                                    content: "\f5b4";
+                                    color: c.$iitbc-secondary-color;
+                                    font-family: bootstrap-icons !important;
+                                }
+                            }
+                            &:nth-child(3){
+                                &::before{
+                                    content: "\f32f";
+                                    font-family: bootstrap-icons !important;
+                                    color: c.$iitbc-secondary-color;
+                                }
+                            }
                         }
                     }
                 }
