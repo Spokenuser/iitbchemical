@@ -1932,14 +1932,14 @@ header.sticky {
     padding-bottom: 70px;
   }
 }
-.collaborations-section .container-fluid {
+.collaborations-section .container-fluid .layout-builder__layout {
   display: flex;
   gap: 20px;
   align-items: center;
   flex-direction: column;
 }
 @media (min-width: 1024px) {
-  .collaborations-section .container-fluid {
+  .collaborations-section .container-fluid .layout-builder__layout {
     flex-direction: row;
     gap: 100px;
   }
@@ -1980,14 +1980,16 @@ header.sticky {
   grid-gap: 15px;
 }
 .collaborations-section .container-fluid .feedback-section {
-  width: 100%;
+  gap: 20px;
 }
 @media (min-width: 1024px) {
   .collaborations-section .container-fluid .feedback-section {
-    width: 49%;
+    flex: 1;
+    display: flex;
+    gap: 30px;
   }
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack {
+.collaborations-section .container-fluid .feedback-section .feednack {
   border: 1px solid rgb(0, 79, 159);
   padding: 25px;
   text-align: center;
@@ -1996,26 +1998,30 @@ header.sticky {
   flex-direction: column;
   background-color: rgba(34, 77, 120, 0.144);
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .img-box {
+.collaborations-section .container-fluid .feedback-section .feednack .img-box {
   width: 150px;
   height: 150px;
   border: 7px solid #fff;
   border-radius: 100%;
   overflow: hidden;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .img-box img {
+.collaborations-section .container-fluid .feedback-section .feednack .img-box img {
   max-width: 100%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack h6 {
+.collaborations-section .container-fluid .feedback-section .feednack h6 {
   color: rgb(0, 79, 159);
   margin-top: 15px;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .list-contact ul {
+.collaborations-section .container-fluid .feedback-section .feednack .list-contact ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .list-contact ul li {
+.collaborations-section .container-fluid .feedback-section .feednack .list-contact ul li {
   padding: 5px 0px;
 }
 
