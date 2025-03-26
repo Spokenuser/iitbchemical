@@ -32,7 +32,10 @@ function chem_custom_form_system_theme_settings_alter(&$form, FormStateInterface
 }
 function chem_custom_preprocess_page(&$variables) {
   $about_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_homepageaboutchemical');
+  $footer_resource_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_resources');
+  $footer_contact_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footercontact');
   $social_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_socialmedialinks');
+  $footer_activities_block = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footeractivities');
   $footer_bottom = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footer');
   $footer_govlogo = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_footergovlogo');
   $language_switch = \Drupal::entityTypeManager()->getStorage('block')->load('chem_custom_languageswitcher');
@@ -41,6 +44,15 @@ function chem_custom_preprocess_page(&$variables) {
   }
   if ($social_block) {
     $variables['social_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($social_block);
+  }
+  if ($footer_contact_block) {
+    $variables['footer_contact_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_contact_block);
+  }
+  if ($footer_activities_block) {
+    $variables['footer_activities_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_activities_block);
+  }
+  if ($footer_resource_block) {
+    $variables['footer_resource_block'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_resource_block);
   }
   if ($footer_bottom) {
     $variables['footer_bottom'] = \Drupal::service('entity_type.manager')->getViewBuilder('block')->view($footer_bottom);

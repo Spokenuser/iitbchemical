@@ -124,59 +124,29 @@
   {% endblock %}
 </div>
 <footer>
-  <section class="footer-section1 reverse-color">
-    <div class="container-fluid">
-      {{ drupal_entity('block_content', 19) }}
-      <div class="item">
-        <h4><i class="bi bi-link-45deg"></i> Quick links</h4>
-        <div class="footer-link">
-          {{ footer_menu_block }}
-        </div>
-      </div>
-      <div class="item">
-        <div class="social-link">
-          {{ social_block }}
-        </div>
-        <div class="gigw-info">
-          <ul>
-            <li><strong>Visitor Counter:</strong> 8640000</li>
-            <li><strong>Visitor Today:</strong> 500</li>
-            <li><strong>Last Updated On:</strong> 02/01/2025</li>
-          </ul>
-        </div>
+  <div class="container-fluid">
+    <div class="item">
+      <h4>Contact</h4>
+      <div class="contact-info-list">
+        {{ footer_contact_block }}
       </div>
     </div>
-  </section>
-
-  <section class="footer-section2 reverse-color">
-    <div class="container-fluid">
-      <div class="govment-logo">
-        <a href="" class="item"><img src="{{ base_path ~ directory }}/assets/gov-logo/data-gov.png"
-            alt="Government Logo" /></a>
-        <a href="" class="item"><img src="{{ base_path ~ directory }}/assets/gov-logo/digital-india.png"
-            alt="Another Logo" /></a>
-        <a href="" class="item"><img src="{{ base_path ~ directory }}/assets/gov-logo/india-gov.png"
-            alt="Another Logo" /></a>
-        <a href="" class="item"><img src="{{ base_path ~ directory }}/assets/gov-logo/mygov.png"
-            alt="Another Logo" /></a>
-        <a href="" class="item"><img src="{{ base_path ~ directory }}/assets/gov-logo/myvisit.png"
-            alt="Another Logo" /></a>
-        <a href="" class="item"><img src="{{ base_path ~ directory }}/assets/gov-logo/swachh-bharat.png"
-            alt="Another Logo" /></a>
+    <div class="item">
+      <h4>Activities</h4>
+      <div class="footer-link">
+        {{ footer_activities_block }}
       </div>
     </div>
-  </section>
-  <hr>
-  <section class="footer-section3">
-    <div class="container-fluid">
-      <div class="last-menu">
-        <div>Copyright © 2025 IIST. All Rights Reserved.</div>
-        <div class="bottom-last-menu">
-          {{ footer_bottom }}
-        </div>
+    <div class="item">
+      <h4>Resources</h4>
+      <div class="footer-link">
+        {{ footer_resource_block }}
+      </div>
+      <div class="social-links">
+        {{ social_block }}
       </div>
     </div>
-  </section>
+  </div>
 </footer>
 </div>
 </div>
