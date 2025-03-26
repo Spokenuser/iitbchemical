@@ -1,0 +1,491 @@
+.hero-video-section {
+    @include mymedia(1024px) {
+        margin-top: 25px;
+    }
+    .video-box {
+        border-radius: 20px;
+        overflow: hidden;
+        max-height: 700px;
+        position: relative;
+        padding: 0px;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay-text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: c.$iitbc-white;
+            h2 {
+                color: c.$iitbc-secondary-color;
+                font-size: 2rem;
+                font-family: f.$roboto-medium;
+                @include mymedia(1024px) {
+                    font-size: 4rem;
+                }
+                span {
+                    color: c.$iitbc-white;
+                    display: block;
+                    font-size: 1.3rem;
+                    font-family: f.$roboto-light;
+                    @include mymedia(1024px) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.about-section {
+    @include padding-top-bottom();
+    color: #fff;
+
+    h2 {
+        @include section-heading(c.$iitbc-white, left, 25px, c.$iitbc-secondary-color);
+    }
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include mymedia(1024px) {
+            flex-direction: row;
+            gap: 70px;
+        }
+        .desc {
+            flex: 1;
+        }
+        .about-img {
+            @include mymedia(1024px) {
+                width: 550px;
+            }
+        }
+    }
+}
+
+.research-section {
+    @include padding-left-right();
+    @include padding-top-bottom();
+    background-color: c.$iitbc-white;
+    .research-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        @include mymedia(768px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px;
+        }
+        @include mymedia(1298px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 50px;
+        }
+        .item {
+            &:nth-child(1) {
+                display: flex;
+                align-items: center;
+                h2 {
+                    @include section-heading(c.$iitbc-primary-color, left, 0px, c.$iitbc-secondary-color);
+                }
+            }
+            .card {
+                border-radius: 10px;
+                border: 0px;
+                overflow: hidden;
+                .img-box {
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transition: all 0.5s;
+                        filter: grayscale(80%);
+                    }
+                }
+                .card-footer {
+                    background-color: c.$iitbc-primary-color;
+                    color: c.$iitbc-white;
+                    padding: 15px;
+                    text-align: center;
+                    font-size: 1.3rem;
+                    border: 0px;
+                    margin-top: 3px;
+                    position: relative;
+                    z-index: 10;
+                    overflow: hidden; // Prevents overflow outside the card footer
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+            &:hover {
+                .img-box {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+                .card{
+                    .img-box{
+
+                        img{
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+                .card-footer {
+                    color: c.$iist-black;
+                    background-color: c.$iitbc-secondary-color;
+                }
+            }
+        }
+    }
+}
+.academic-section {
+    @include padding-left-right();
+    @include padding-top-bottom();
+    background-color: c.$iitbc-primary-color;
+
+    h2 {
+        @include section-heading(c.$iitbc-white, left, 25px, c.$iitbc-secondary-color);
+    }
+    .academic-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+        @include mymedia(1024px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+        }
+        .item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            .img-box {
+                border-radius: 15px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transition: all 0.5s;
+                }
+            }
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                .icon {
+                    background-color: c.$iitbc-primary-color;
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    left: -25px;
+                    bottom: -5px;
+                    z-index: 10;
+                    padding: 20px;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .caption {
+                    background-color: rgba(0, 80, 159, 0.808);
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                    padding: 10px 30px;
+                    position: relative;
+                    left: -40px;
+                    transition: all 0.5s;
+                    z-index: 1;
+                    a {
+                        color: c.$iitbc-white;
+                        font-family: f.$roboto-medium;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        @include mymedia(768px) {
+                            font-size: 1.3rem;
+                        }
+                        span {
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .img-box {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+                .overlay {
+                    .caption,
+                    .icon {
+                        background-color: c.$iitbc-secondary-color;
+                        a {
+                            color: c.$iist-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.events-section {
+    @include padding-left-right();
+    @include padding-top-bottom();
+
+    h2 {
+        @include section-heading(c.$iitbc-primary-color, left, 40px, c.$iitbc-secondary-color);
+    }
+    .events-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include mymedia(1024px) {
+            flex-direction: row;
+            gap: 70px;
+        }
+        .list-annocuement {
+            flex: 1;
+            ul {
+                @include unorder-list();
+                li {
+                    padding: 23px 0px;
+                    display: flex;
+                    font-size: 1rem;
+                    gap: 15px;
+                    border-bottom: 1px solid #ccc;
+                    flex-direction: column;
+                    @include mymedia(600px) {
+                        flex-direction: row;
+                    }
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+                    &:last-child {
+                        border-bottom: 0px;
+                        padding-bottom: 0px;
+                    }
+                    .img-box {
+                        img {
+                            width: 100%;
+                        }
+
+                        @include mymedia(600px) {
+                            width: 150px;
+                        }
+                    }
+                    .info {
+                        flex: 1;
+                        h6 {
+                            font-size: 1.3rem;
+                        }
+                        span {
+                            font-size: 0.9rem;
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+
+        .event-list {
+            background-color: c.$iitbc-primary-color;
+            padding: 15px;
+            flex: 1;
+            border-radius: 15px;
+
+            @include mymedia(768px) {
+                padding: 50px;
+            }
+
+            ul {
+                @include unorder-list();
+
+                li {
+                    padding: 15px 0px;
+                    border-bottom: 1px solid #cccccc87;
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+                    &:last-child {
+                        border-bottom: 0px;
+                        padding-bottom: 0px;
+                    }
+                    h5 {
+                        color: c.$iitbc-white;
+                        font-size: 1.1rem;
+                        @include mymedia(768px) {
+                            font-size: 1.5rem;
+                        }
+                        a {
+                            color: c.$iitbc-white;
+                            transition: all 0.5s;
+                            text-decoration: none;
+                        }
+                    }
+                    span {
+                        color: #ccc;
+                        font-style: italic;
+                    }
+                    &:hover {
+                        h5 {
+                            a {
+                                color: c.$iitbc-secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .research-slider {
+        margin-top: 70px;
+        .item {
+            .img-box {
+                position: relative;
+                border-radius: 15px;
+                overflow: hidden;
+
+                img {
+                    transition: all 0.5s;
+                }
+                .overlay {
+                    position: absolute;
+                    padding: 35px;
+                    bottom: 0px;
+                    top: 0;
+                    color: c.$iitbc-white;
+                    background: rgb(0, 0, 0);
+                    background: linear-gradient(180deg, rgb(0 0 0 / 0%) 56%, rgb(0, 0, 0) 100%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    h5 {
+                        color: c.$iitbc-secondary-color;
+                        font-size: 1.5rem;
+                        font-family: f.$roboto-medium;
+                    }
+                }
+            }
+        }
+
+        .owl-prev,
+        .owl-next {
+            position: relative;
+
+            background: rgba(0, 0, 0, 0.5); /* Optional: Add background */
+            color: white; /* Optional: Change arrow color */
+            border-radius: 50%;
+            width: 40px; /* Adjust size */
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-size: 2rem;
+            }
+
+            @include mymedia(1024px) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .owl-prev {
+            @include mymedia(1024px) {
+                left: -50px; /* Adjust distance from the left */
+            }
+        }
+
+        .owl-next {
+            @include mymedia(1024px) {
+                right: -50px; /* Adjust distance from the right */
+            }
+        }
+        .owl-nav {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.collaborations-section {
+    @include padding-left-right();
+    @include padding-top-bottom();
+
+    .container-fluid {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+        @include mymedia(1024px) {
+            flex-direction: row;
+            gap: 100px;
+        }
+        .collaborations-logo {
+            @include mymedia(1024px) {
+                flex: 1;
+            }
+
+            h2 {
+                @include section-heading(c.$iitbc-primary-color, left, 25px, c.$iitbc-secondary-color);
+            }
+            .logo-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 15px;
+            }
+        }
+        .feedback-section {
+            width: 100%;
+            @include mymedia(1024px) {
+                width: 49%;
+            }
+            .feedback-slider {
+                .item {
+                    .feednack {
+                        border: 1px solid c.$iitbc-primary-color;
+                        padding: 25px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: rgba(34, 77, 120, 0.144);
+                        .img-box {
+                            width: 150px;
+                            height: 150px;
+                            border: 7px solid #fff;
+                            border-radius: 100%;
+                            overflow: hidden;
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+
+                        h6 {
+                            color: c.$iitbc-primary-color;
+                            margin-top: 15px;
+                        }
+
+                        .list-contact {
+                            ul {
+                                @include unorder-list();
+                                li {
+                                    padding: 5px 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
