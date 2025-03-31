@@ -1,0 +1,30 @@
+uuid: 8ac1bcd7-6f7b-41ce-9f98-e464d4dfcb26
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:homepage_hero_video:2b48805a-7a39-4871-bad2-ce7307619fec'
+  module:
+    - block_content
+    - system
+  theme:
+    - chem_custom
+id: chem_custom_homepageherovideo
+theme: chem_custom
+region: homepage_hero
+weight: 0
+provider: null
+plugin: 'block_content:2b48805a-7a39-4871-bad2-ce7307619fec'
+settings:
+  id: 'block_content:2b48805a-7a39-4871-bad2-ce7307619fec'
+  label: 'Homepage Hero Video'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,35 @@
+uuid: 06204404-1b75-4c22-a3e5-9e3aaea195b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image
+    - media.type.image
+    - taxonomy.vocabulary.research_area
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: taxonomy_term.research_area.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: research_area
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

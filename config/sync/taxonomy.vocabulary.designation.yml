@@ -1,0 +1,9 @@
+uuid: 8a64909c-cad5-4160-bf02-7f576e9cb07e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Faculty Designation'
+vid: designation
+description: null
+weight: 0
+new_revision: false

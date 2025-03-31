@@ -1,0 +1,25 @@
+uuid: 86e601da-e004-46e8-827f-a17e4a34b14c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.image_with_icon_and_text
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.image_with_icon_and_text.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: image_with_icon_and_text
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

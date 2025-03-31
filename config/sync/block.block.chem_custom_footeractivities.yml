@@ -1,0 +1,34 @@
+uuid: 5a6a7112-1aa2-45a4-b4f0-f2dbe2c1cf00
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-activities
+  module:
+    - menu_block
+  theme:
+    - chem_custom
+id: chem_custom_footeractivities
+theme: chem_custom
+region: footer_first
+weight: 0
+provider: null
+plugin: 'menu_block:footer-activities'
+settings:
+  id: 'menu_block:footer-activities'
+  label: 'Footer Activities'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  display_empty: false
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer-activities:'
+  render_parent: false
+  suggestion: footer_activities
+  hide_on_nonactive: false
+visibility: {  }

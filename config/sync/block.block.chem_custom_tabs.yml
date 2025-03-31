@@ -1,0 +1,20 @@
+uuid: 9a4ce219-e493-41f1-8ca8-edfa0088b9c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - chem_custom
+id: chem_custom_tabs
+theme: chem_custom
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

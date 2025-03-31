@@ -1,0 +1,8 @@
+uuid: 4644d578-b914-4a28-b8da-d8f601eee5e3
+langcode: en
+status: true
+dependencies: {  }
+id: title_link_with_image
+label: 'Title, Link with Image'
+revision: false
+description: null

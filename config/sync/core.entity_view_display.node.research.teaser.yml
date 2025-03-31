@@ -1,0 +1,32 @@
+uuid: e28f8018-ab03-488d-b6c2-b82939632612
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.research.body
+    - field.field.node.research.field_featured_image
+    - node.type.research
+  module:
+    - text
+    - user
+id: node.research.teaser
+targetEntityType: node
+bundle: research
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_featured_image: true

@@ -1,0 +1,27 @@
+uuid: cb0b1966-2890-4e39-9a5e-9f00520889d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.event
+  module:
+    - datetime_range
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.event.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: event
+label: 'Event Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

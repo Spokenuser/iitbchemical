@@ -1,0 +1,10 @@
+uuid: b5a51ad9-aab5-4f0b-8004-4fa3a9ee4b91
+langcode: en
+status: true
+dependencies: {  }
+id: icon
+label: Icon
+icon_uuid: null
+icon_default: null
+description: 'Add if need multiple icons at one place.'
+behavior_plugins: {  }

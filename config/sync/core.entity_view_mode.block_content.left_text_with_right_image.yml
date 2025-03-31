@@ -1,0 +1,11 @@
+uuid: afd087ca-fe3d-4fa0-8de9-e1b49884c354
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.left_text_with_right_image
+label: 'Left text with right image'
+description: ''
+targetEntityType: block_content
+cache: true

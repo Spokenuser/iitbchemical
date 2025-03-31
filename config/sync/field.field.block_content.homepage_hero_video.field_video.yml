@@ -1,0 +1,35 @@
+uuid: 43f7f4d8-1781-416e-80af-3c72b59e8286
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_hero_video
+    - field.storage.block_content.field_video
+    - media.type.video
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: block_content.homepage_hero_video.field_video
+field_name: field_video
+entity_type: block_content
+bundle: homepage_hero_video
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

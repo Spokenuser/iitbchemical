@@ -1,0 +1,9 @@
+uuid: bddc246b-eb20-4a2a-85e4-7412865eb660
+langcode: en
+status: true
+dependencies: {  }
+name: 'Employment Category'
+vid: employment_category
+description: null
+weight: 0
+new_revision: false

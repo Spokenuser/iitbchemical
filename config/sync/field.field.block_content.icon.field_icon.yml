@@ -1,0 +1,42 @@
+uuid: 7abb194d-3a58-476d-bbf5-6993f4d7f1ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon
+    - field.storage.block_content.field_icon
+    - paragraphs.paragraphs_type.icon
+  module:
+    - entity_reference_revisions
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: block_content.icon.field_icon
+field_name: field_icon
+entity_type: block_content
+bundle: icon
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 4
+        enabled: false
+      icon:
+        weight: 5
+        enabled: true
+      image_with_icon_and_text:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

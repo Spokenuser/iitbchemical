@@ -1,0 +1,9 @@
+uuid: 0d6d3d97-3d64-479c-a580-48b7865617d2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research Area'
+vid: research_area
+description: null
+weight: 0
+new_revision: false

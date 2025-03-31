@@ -1,0 +1,27 @@
+uuid: afca54ca-3a6f-4d89-881f-cc6ce570b27a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_number
+    - node.type.people
+  module:
+    - telephone
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.people.field_mobile_number
+field_name: field_mobile_number
+entity_type: node
+bundle: people
+label: 'Mobile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

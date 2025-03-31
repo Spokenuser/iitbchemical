@@ -1,0 +1,34 @@
+uuid: de2a4811-a062-4316-910a-7995de01b747
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon.field_icon
+    - field.field.paragraph.icon.field_link
+    - paragraphs.paragraphs_type.icon
+  module:
+    - link
+    - media_library
+id: paragraph.icon.default
+targetEntityType: paragraph
+bundle: icon
+mode: default
+content:
+  field_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

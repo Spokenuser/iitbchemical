@@ -1,0 +1,27 @@
+uuid: 9282e2d5-3aa1-4be4-8ee8-bab504571bb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_number
+    - node.type.faculty_page
+  module:
+    - telephone
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.faculty_page.field_mobile_number
+field_name: field_mobile_number
+entity_type: node
+bundle: faculty_page
+label: 'Mobile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

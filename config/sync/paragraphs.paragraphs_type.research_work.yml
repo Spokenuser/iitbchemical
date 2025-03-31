@@ -1,0 +1,10 @@
+uuid: 57a3346f-7904-4ba2-926a-aa5c89a14b60
+langcode: en
+status: true
+dependencies: {  }
+id: research_work
+label: 'Research and Development'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

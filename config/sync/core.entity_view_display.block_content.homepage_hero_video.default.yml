@@ -1,0 +1,40 @@
+uuid: c01f77db-2924-4f96-99df-62e54546fd69
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_hero_video
+    - field.field.block_content.homepage_hero_video.field_subheading
+    - field.field.block_content.homepage_hero_video.field_title
+    - field.field.block_content.homepage_hero_video.field_video
+id: block_content.homepage_hero_video.default
+targetEntityType: block_content
+bundle: homepage_hero_video
+mode: default
+content:
+  field_subheading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

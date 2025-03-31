@@ -1,0 +1,25 @@
+uuid: 88ecbb90-6838-43b7-976d-62d85a3b5120
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dcdbf2d3-e563-46d3-a2fc-4828052f577d'
+  module:
+    - block_content
+  theme:
+    - chem_custom
+id: chem_custom_footercontact
+theme: chem_custom
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:dcdbf2d3-e563-46d3-a2fc-4828052f577d'
+settings:
+  id: 'block_content:dcdbf2d3-e563-46d3-a2fc-4828052f577d'
+  label: 'Footer contact'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: b556a413-f0a1-4474-b888-3fc1830b59eb
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_hero_video
+label: 'Homepage Hero Video'
+revision: false
+description: null

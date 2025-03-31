@@ -1,0 +1,11 @@
+uuid: e4e43de3-750a-4356-98e9-7e2dc04a3468
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.top_image_below_title
+label: 'Top image below title'
+description: ''
+targetEntityType: block_content
+cache: true

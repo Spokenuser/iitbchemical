@@ -1,0 +1,9 @@
+uuid: 41df9211-4595-42d3-92ad-516b603bed18
+langcode: en
+status: true
+dependencies: {  }
+name: 'Faculty category'
+vid: faculty_category
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,46 @@
+uuid: 3a9c5363-8e58-48e4-8442-872ab75c2154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research
+    - node.type.faculty_page
+    - paragraphs.paragraphs_type.research_work
+  module:
+    - entity_reference_revisions
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.faculty_page.field_research
+field_name: field_research
+entity_type: node
+bundle: faculty_page
+label: Research
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      research_work: research_work
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 5
+        enabled: false
+      icon:
+        weight: 6
+        enabled: false
+      image_with_icon_and_text:
+        weight: 7
+        enabled: false
+      research_work:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

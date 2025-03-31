@@ -1,0 +1,27 @@
+uuid: 99303a81-bea5-4e98-a063-6d3c90931ed0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_detail_description
+    - paragraphs.paragraphs_type.research_work
+  module:
+    - text
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.research_work.field_detail_description
+field_name: field_detail_description
+entity_type: paragraph
+bundle: research_work
+label: 'Detail description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

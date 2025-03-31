@@ -1,0 +1,29 @@
+uuid: 2fd73141-31fb-46e7-8b9e-cef0c7a6a1c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_detail_page
+    - node.type.faculty_page
+  module:
+    - link
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.faculty_page.field_link_to_detail_page
+field_name: field_link_to_detail_page
+entity_type: node
+bundle: faculty_page
+label: 'Link to source/detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

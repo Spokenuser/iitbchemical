@@ -1,0 +1,64 @@
+uuid: 8b682a7e-e5be-4875-9967-6d4eafa401f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.overlay_card
+    - field.field.node.research.body
+    - field.field.node.research.field_featured_image
+    - node.type.research
+  module:
+    - layout_builder
+    - media
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.research.overlay_card
+targetEntityType: node
+bundle: research
+mode: overlay_card
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_featured_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

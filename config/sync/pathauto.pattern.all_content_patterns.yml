@@ -1,0 +1,28 @@
+uuid: 456474ab-3751-4111-82ae-00b73f1b0e31
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: all_content_patterns
+label: 'All content patterns'
+type: 'canonical_entities:node'
+pattern: '[node:content-type:name]/[node:title]'
+selection_criteria:
+  e45b875a-1c44-4789-95f3-1ee2677cb303:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e45b875a-1c44-4789-95f3-1ee2677cb303
+    context_mapping:
+      node: node
+    bundles:
+      announcement: announcement
+      article: article
+      event: event
+      faculty_page: faculty_page
+      page: page
+      people: people
+      research: research
+selection_logic: and
+weight: -5
+relationships: {  }

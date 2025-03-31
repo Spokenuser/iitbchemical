@@ -1,0 +1,30 @@
+uuid: 13c0a2a5-ef02-476b-a6c4-201fdb08e4a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heading
+    - field.field.block_content.heading.field_subheading
+    - field.field.block_content.heading.field_title
+id: block_content.heading.default
+targetEntityType: block_content
+bundle: heading
+mode: default
+content:
+  field_subheading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

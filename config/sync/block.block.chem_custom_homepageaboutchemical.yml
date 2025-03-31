@@ -1,0 +1,30 @@
+uuid: 49f7a597-5f8c-464e-87c5-906f3a112b5c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:title_text_with_image:c5395c49-16be-4966-a873-f25ae68cdf6d'
+  module:
+    - block_content
+    - system
+  theme:
+    - chem_custom
+id: chem_custom_homepageaboutchemical
+theme: chem_custom
+region: featured_top
+weight: -1
+provider: null
+plugin: 'block_content:c5395c49-16be-4966-a873-f25ae68cdf6d'
+settings:
+  id: 'block_content:c5395c49-16be-4966-a873-f25ae68cdf6d'
+  label: 'Homepage About Chemical'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: left_text_with_right_image
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

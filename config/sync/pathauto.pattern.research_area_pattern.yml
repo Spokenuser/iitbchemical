@@ -1,0 +1,22 @@
+uuid: ec060dc7-b12a-4ef7-b779-23f2d75f5dc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: research_area_pattern
+label: 'Research area pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'research-area/[term:name]'
+selection_criteria:
+  d6d0dbb5-fc8a-48f8-80e6-0b8ab090b3ed:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: d6d0dbb5-fc8a-48f8-80e6-0b8ab090b3ed
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      research_area: research_area
+selection_logic: and
+weight: -5
+relationships: {  }

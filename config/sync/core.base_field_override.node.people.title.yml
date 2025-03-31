@@ -1,0 +1,18 @@
+uuid: 5b18904e-528d-4afe-a550-59fe98744b6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.people
+id: node.people.title
+field_name: title
+entity_type: node
+bundle: people
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

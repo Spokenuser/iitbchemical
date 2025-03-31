@@ -1,0 +1,45 @@
+uuid: edb85fa9-3b3b-4182-9886-4af4f00d284b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.research_area.field_image
+    - field.field.taxonomy_term.research_area.field_link_to_detail_research
+    - taxonomy.vocabulary.research_area
+  module:
+    - link
+    - text
+id: taxonomy_term.research_area.default
+targetEntityType: taxonomy_term
+bundle: research_area
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link_to_detail_research:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

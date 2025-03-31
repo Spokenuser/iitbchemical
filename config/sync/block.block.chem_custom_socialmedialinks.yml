@@ -1,0 +1,177 @@
+uuid: 97784bd2-df2b-4eb2-b72e-d476526b3535
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - chem_custom
+id: chem_custom_socialmedialinks
+theme: chem_custom
+region: footer_first
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: social_media_links
+  platforms:
+    goodreads:
+      value: ''
+      description: ''
+      weight: '-10'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-9'
+    contact:
+      value: ''
+      description: ''
+      weight: '-8'
+    behance:
+      value: ''
+      description: ''
+      weight: '-7'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '-6'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-5'
+    yandex_zen:
+      value: ''
+      description: ''
+      weight: '-4'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '-3'
+    rss:
+      value: ''
+      description: ''
+      weight: '-2'
+    twitter:
+      value: iitb-chemical
+      description: ''
+      weight: '-1'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '0'
+    website:
+      value: ''
+      description: ''
+      weight: '1'
+    whatsapp_channel:
+      value: ''
+      description: ''
+      weight: '2'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '3'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '4'
+    facebook:
+      value: iitb-chemical
+      description: ''
+      weight: '5'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '6'
+    patreon:
+      value: ''
+      description: ''
+      weight: '7'
+    drupal:
+      value: ''
+      description: ''
+      weight: '8'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '9'
+    telegram:
+      value: ''
+      description: ''
+      weight: '10'
+    meetup:
+      value: ''
+      description: ''
+      weight: '11'
+    github:
+      value: ''
+      description: ''
+      weight: '12'
+    email:
+      value: ''
+      description: ''
+      weight: '13'
+    flickr:
+      value: ''
+      description: ''
+      weight: '14'
+    xing:
+      value: ''
+      description: ''
+      weight: '15'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '16'
+    youtube:
+      value: ''
+      description: ''
+      weight: '17'
+    linkedin:
+      value: iitb-chemical
+      description: ''
+      weight: '18'
+    amazon:
+      value: ''
+      description: ''
+      weight: '19'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '20'
+    instagram:
+      value: iitb-chemical
+      description: ''
+      weight: '21'
+    soundcloud:
+      value: ''
+      description: ''
+      weight: '22'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '23'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '24'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '25'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: f822e872-0259-44c5-a7f2-1a67457cf3ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.award_or_honor.field_award_title
+    - field.field.paragraph.award_or_honor.field_link
+    - paragraphs.paragraphs_type.award_or_honor
+  module:
+    - link
+id: paragraph.award_or_honor.default
+targetEntityType: paragraph
+bundle: award_or_honor
+mode: default
+content:
+  field_award_title:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

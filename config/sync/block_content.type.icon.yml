@@ -1,0 +1,8 @@
+uuid: 62a33782-ae32-44f5-a4b3-daeb5cadaea1
+langcode: en
+status: true
+dependencies: {  }
+id: icon
+label: Icon
+revision: false
+description: null

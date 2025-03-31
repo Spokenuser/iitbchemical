@@ -1,0 +1,26 @@
+uuid: b02f6609-7a96-42e4-8ed2-ffd360d84d6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_building
+    - node.type.people
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.people.field_building
+field_name: field_building
+entity_type: node
+bundle: people
+label: Building
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

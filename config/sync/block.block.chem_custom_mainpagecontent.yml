@@ -1,0 +1,20 @@
+uuid: 8eb9c844-32b4-429d-b20f-ef4cbe42e988
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - chem_custom
+id: chem_custom_mainpagecontent
+theme: chem_custom
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

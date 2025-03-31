@@ -1,0 +1,39 @@
+uuid: 77ee0718-6d40-4a81-8f36-6523caa827f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_icon_and_title
+    - field.storage.block_content.field_image_icon_card
+    - paragraphs.paragraphs_type.image_with_icon_and_text
+  module:
+    - entity_reference_revisions
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: block_content.image_with_icon_and_title.field_image_icon_card
+field_name: field_image_icon_card
+entity_type: block_content
+bundle: image_with_icon_and_title
+label: 'Image icon card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_with_icon_and_text: image_with_icon_and_text
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 3
+        enabled: false
+      image_with_icon_and_text:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

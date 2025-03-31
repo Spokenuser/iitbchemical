@@ -1,0 +1,35 @@
+uuid: a8a8350d-1698-447d-91c8-95a377947042
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_text_with_image
+    - field.storage.block_content.field_image
+    - media.type.image
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: block_content.title_text_with_image.field_image
+field_name: field_image
+entity_type: block_content
+bundle: title_text_with_image
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

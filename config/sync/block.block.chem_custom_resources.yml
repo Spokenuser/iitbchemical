@@ -1,0 +1,34 @@
+uuid: ab0797cb-aaa6-4408-9f32-bd7fb49172e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.resources
+  module:
+    - menu_block
+  theme:
+    - chem_custom
+id: chem_custom_resources
+theme: chem_custom
+region: footer_first
+weight: 0
+provider: null
+plugin: 'menu_block:resources'
+settings:
+  id: 'menu_block:resources'
+  label: Resources
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  display_empty: false
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'resources:'
+  render_parent: false
+  suggestion: resources
+  hide_on_nonactive: false
+visibility: {  }

@@ -1,0 +1,91 @@
+uuid: f9ad53c7-a5ad-4ac1-a6b1-d4c8a990e1b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - layout_library
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          d960b861-eb20-43a0-b44b-17dfd49b1f39:
+            uuid: d960b861-eb20-43a0-b44b-17dfd49b1f39
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          e1e493ca-6b71-4070-9196-bee27301fa24:
+            uuid: e1e493ca-6b71-4070-9196-bee27301fa24
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - 'bootstrap_layout_builder:blb_col_1'
+        - 'bootstrap_layout_builder:blb_col_2'
+        - 'bootstrap_layout_builder:blb_col_3'
+        - 'bootstrap_layout_builder:blb_col_4'
+        - 'bootstrap_layout_builder:blb_col_5'
+        - 'bootstrap_layout_builder:blb_col_6'
+        - 'bootstrap_layout_builder:blb_col_7'
+        - 'bootstrap_layout_builder:blb_col_8'
+        - 'bootstrap_layout_builder:blb_col_9'
+        - 'bootstrap_layout_builder:blb_col_10'
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  layout_builder__layout: true

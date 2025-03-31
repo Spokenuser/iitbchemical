@@ -1,0 +1,8 @@
+uuid: 6744d8fe-ab38-4d8e-8a4d-c4036f5a7a89
+langcode: en
+status: true
+dependencies: {  }
+id: footer-activities
+label: 'Footer Activities'
+description: ''
+locked: false

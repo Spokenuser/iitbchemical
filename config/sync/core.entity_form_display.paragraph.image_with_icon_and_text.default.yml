@@ -1,0 +1,51 @@
+uuid: 3955482a-6d96-4564-b0be-ed5c79f97cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_icon_and_text.field_icon
+    - field.field.paragraph.image_with_icon_and_text.field_image
+    - field.field.paragraph.image_with_icon_and_text.field_link
+    - field.field.paragraph.image_with_icon_and_text.field_title
+    - paragraphs.paragraphs_type.image_with_icon_and_text
+  module:
+    - link
+    - media_library
+id: paragraph.image_with_icon_and_text.default
+targetEntityType: paragraph
+bundle: image_with_icon_and_text
+mode: default
+content:
+  field_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,48 @@
+uuid: a5d31cc9-14be-48f3-97ab-9e1f30d96fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.people.body
+    - field.field.node.people.field_building
+    - field.field.node.people.field_designation
+    - field.field.node.people.field_email
+    - field.field.node.people.field_employment_category
+    - field.field.node.people.field_link_to_detail_page
+    - field.field.node.people.field_mobile_number
+    - field.field.node.people.field_photo
+    - field.field.node.people.field_professional_background
+    - field.field.node.people.field_room_number
+    - node.type.people
+  module:
+    - text
+    - user
+id: node.people.teaser
+targetEntityType: node
+bundle: people
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_building: true
+  field_designation: true
+  field_email: true
+  field_employment_category: true
+  field_link_to_detail_page: true
+  field_mobile_number: true
+  field_photo: true
+  field_professional_background: true
+  field_room_number: true

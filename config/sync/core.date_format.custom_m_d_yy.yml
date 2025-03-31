@@ -1,0 +1,8 @@
+uuid: 319b56a9-6fea-4573-b559-53b6df2c01c7
+langcode: en
+status: true
+dependencies: {  }
+id: custom_m_d_yy
+label: 'Custom d/m/yy'
+locked: false
+pattern: d/m/Y

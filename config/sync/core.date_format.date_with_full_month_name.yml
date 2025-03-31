@@ -1,0 +1,8 @@
+uuid: 94300fad-88f5-45cb-8d93-febe3e809d61
+langcode: en
+status: true
+dependencies: {  }
+id: date_with_full_month_name
+label: 'Date with Full month name'
+locked: false
+pattern: 'j F'
