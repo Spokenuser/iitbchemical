@@ -1932,14 +1932,14 @@ header.sticky {
     padding-bottom: 70px;
   }
 }
-.collaborations-section .container-fluid {
+.collaborations-section .container-fluid .layout-builder__layout {
   display: flex;
   gap: 20px;
   align-items: center;
   flex-direction: column;
 }
 @media (min-width: 1024px) {
-  .collaborations-section .container-fluid {
+  .collaborations-section .container-fluid .layout-builder__layout {
     flex-direction: row;
     gap: 100px;
   }
@@ -1974,20 +1974,22 @@ header.sticky {
     font-size: 3.5rem;
   }
 }
-.collaborations-section .container-fluid .collaborations-logo .logo-grid {
+.collaborations-section .container-fluid .collaborations-logo .field--name-field-icon {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
 }
 .collaborations-section .container-fluid .feedback-section {
-  width: 100%;
+  gap: 20px;
 }
 @media (min-width: 1024px) {
   .collaborations-section .container-fluid .feedback-section {
-    width: 49%;
+    flex: 1;
+    display: flex;
+    gap: 30px;
   }
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack {
+.collaborations-section .container-fluid .feedback-section .feednack {
   border: 1px solid rgb(0, 79, 159);
   padding: 25px;
   text-align: center;
@@ -1996,26 +1998,30 @@ header.sticky {
   flex-direction: column;
   background-color: rgba(34, 77, 120, 0.144);
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .img-box {
+.collaborations-section .container-fluid .feedback-section .feednack .img-box {
   width: 150px;
   height: 150px;
   border: 7px solid #fff;
   border-radius: 100%;
   overflow: hidden;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .img-box img {
+.collaborations-section .container-fluid .feedback-section .feednack .img-box img {
   max-width: 100%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack h6 {
+.collaborations-section .container-fluid .feedback-section .feednack h6 {
   color: rgb(0, 79, 159);
   margin-top: 15px;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .list-contact ul {
+.collaborations-section .container-fluid .feedback-section .feednack .list-contact ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
 }
-.collaborations-section .container-fluid .feedback-section .feedback-slider .item .feednack .list-contact ul li {
+.collaborations-section .container-fluid .feedback-section .feednack .list-contact ul li {
   padding: 5px 0px;
 }
 
@@ -2647,6 +2653,8 @@ footer .container-fluid .item .footer-link ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 footer .container-fluid .item .footer-link ul li {
   padding: 5px 0px;
@@ -2654,6 +2662,7 @@ footer .container-fluid .item .footer-link ul li {
 footer .container-fluid .item .footer-link ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 0px;
 }
 footer .container-fluid .item .footer-link ul li:hover a {
   color: rgb(192, 224, 89);
@@ -2671,6 +2680,16 @@ footer .container-fluid .item:nth-child(1) .contact-info-list ul li {
 footer .container-fluid .item:nth-child(1) .contact-info-list ul li i {
   color: rgb(192, 224, 89);
 }
+footer .container-fluid .item:nth-child(1) .contact-info-list ul li:nth-child(2)::before {
+  content: "\f5b4";
+  color: rgb(192, 224, 89);
+  font-family: bootstrap-icons !important;
+}
+footer .container-fluid .item:nth-child(1) .contact-info-list ul li:nth-child(3)::before {
+  content: "\f32f";
+  font-family: bootstrap-icons !important;
+  color: rgb(192, 224, 89);
+}
 footer .container-fluid .item:nth-child(3) .social-links {
   margin-top: 20px;
 }
@@ -2686,5 +2705,5 @@ footer .container-fluid .item:nth-child(3) .social-links ul li {
 }
 footer .container-fluid .item:nth-child(3) .social-links ul li a {
   color: rgb(192, 224, 89);
-  font-size: 2rem;
+  font-size: 1rem;
 }/*# sourceMappingURL=theme-style.css.map */

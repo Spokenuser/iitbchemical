@@ -20,11 +20,14 @@ footer{
             .footer-link{
                 ul{
                     @include unorder-list();
+                    display: flex ;
+                        flex-direction: column;
                     li{
                         padding: 5px 0px;
                         a{
                             color: #fff;
                             text-decoration: none;
+                            padding: 0px;
                         }
                         &:hover{
                            a{
@@ -46,6 +49,21 @@ footer{
                             i{
                                 color: c.$iitbc-secondary-color;
                             }
+
+                            &:nth-child(2){
+                                &::before{
+                                    content: "\f5b4";
+                                    color: c.$iitbc-secondary-color;
+                                    font-family: bootstrap-icons !important;
+                                }
+                            }
+                            &:nth-child(3){
+                                &::before{
+                                    content: "\f32f";
+                                    font-family: bootstrap-icons !important;
+                                    color: c.$iitbc-secondary-color;
+                                }
+                            }
                         }
                     }
                 }
@@ -61,7 +79,7 @@ footer{
                             padding: 0px;
                             a{
                                 color: c.$iitbc-secondary-color;
-                                font-size: 2rem;
+                                font-size: 1rem;
                             }
                         }
                     }
