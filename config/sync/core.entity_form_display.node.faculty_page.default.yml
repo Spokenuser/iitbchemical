@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.faculty_page.field_award_image
     - field.field.node.faculty_page.field_awards_honors
     - field.field.node.faculty_page.field_courses
     - field.field.node.faculty_page.field_designation
@@ -72,6 +73,13 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_award_image:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_awards_honors:
     type: paragraphs

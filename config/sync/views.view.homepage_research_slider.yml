@@ -9,7 +9,6 @@ dependencies:
     - field.storage.node.field_featured_image
     - node.type.research
   module:
-    - blazy
     - media
     - node
     - smart_trim
@@ -302,12 +301,11 @@ display:
           value:
             research: research
       style:
-        type: blazy
+        type: default
         options:
-          grid: '3'
-          grid_medium: '2'
-          grid_small: '1'
-          style: grid
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:

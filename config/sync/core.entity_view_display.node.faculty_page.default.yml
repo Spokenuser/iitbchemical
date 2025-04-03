@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.faculty_page.field_award_image
     - field.field.node.faculty_page.field_awards_honors
     - field.field.node.faculty_page.field_courses
     - field.field.node.faculty_page.field_designation
@@ -26,6 +27,15 @@ targetEntityType: node
 bundle: faculty_page
 mode: default
 content:
+  field_award_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
   field_awards_honors:
     type: entity_reference_revisions_entity_view
     label: hidden

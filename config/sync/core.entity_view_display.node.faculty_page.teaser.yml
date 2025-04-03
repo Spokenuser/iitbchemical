@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.faculty_page.field_award_image
     - field.field.node.faculty_page.field_awards_honors
     - field.field.node.faculty_page.field_courses
     - field.field.node.faculty_page.field_designation
@@ -30,6 +31,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_award_image: true
   field_awards_honors: true
   field_courses: true
   field_designation: true
