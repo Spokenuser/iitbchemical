@@ -4,159 +4,226 @@
     background-color: #f3f4f4;
 }
 
-.faculty-list-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #eeeeee;
-    padding: 20px;
-    align-items: center;
-    border-radius: 10px;
-    flex-direction: column;
-    @include mymedia(600px) {
-        flex-direction: row;
-        gap: 70px;
-    }
-    .fac-category-list {
-        width: 100%;
-        @include mymedia(768px) {
-            width: 25%;
-        }
-        h4 {
-            margin-bottom: 0px;
-        }
-        .form-select {
-            border: 1px solid #ccc;
-            box-shadow: none;
-        }
-    }
-}
+.view-faculty-listing {
 
-.faculty-list-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 40px;
-    margin-top: 40px;
-    @include mymedia(767px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @include mymedia(1025px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @include mymedia(1298px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .item-fac {
-        .fac-dp-pic {
-            overflow: hidden;
-            img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                transition: all 1s;
+    .view-filters {
+        display: flex;
+        justify-content: end;
+        background-color: #eeeeee;
+        padding: 20px;
+        align-items: center;
+        border-radius: 10px;
+        flex-direction: column;
+
+        @include mymedia(600px) {
+            flex-direction: row;
+            gap: 70px;
+        }
+
+        .js-form-item {
+            margin-bottom: 0px !important;
+        }
+
+        .fac-category-list {
+            width: 100%;
+
+            @include mymedia(768px) {
+                width: 25%;
+            }
+
+            h4 {
+                margin-bottom: 0px;
+            }
+
+            .form-select {
+                border: 1px solid #ccc;
+                box-shadow: none;
             }
         }
-        .body {
-            padding: 15px;
-            h5 {
-                color: c.$iist-black;
-                small {
-                    display: block;
-                    font-size: 0.9rem;
-                    font-weight: 400;
-                    color: #575757;
-                    margin-top: 5px;
+    }
+
+    .view-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+        margin: 0px;
+        margin-top: 40px;
+
+        @include mymedia(767px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mymedia(1025px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mymedia(1298px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .views-row {
+            padding: 0px;
+
+            .fac-dp-pic {
+                overflow: hidden;
+                height: 380px;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 1s;
                 }
             }
-            .contact-info-list {
-                ul {
-                    @include unorder-list();
-                    li {
-                        padding: 5px 0px;
+
+            .body {
+                padding: 15px;
+
+                h5 {
+                    color: c.$iist-black;
+
+                    a {
+                        color: c.$iist-black;
+                        text-decoration: none;
+                    }
+
+                    small {
+                        display: block;
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        color: #575757;
+                        margin-top: 5px;
+                    }
+                }
+
+                .contact-info-list {
+                    ul {
+                        @include unorder-list();
+
+                        li {
+                            padding: 2px 0px;
+                            display: flex;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .fac-dp-pic {
+                    img {
+                        transform: scale(1.1);
                     }
                 }
             }
         }
-
-        &:hover {
-            .fac-dp-pic {
-                img {
-                    transform: scale(1.1);
-                }
-            }
-        }
     }
 }
+
+
+
+
 .faculty-details-section {
     .faculty-details-header {
         background-color: c.$iitbc-secondary-color;
         @include padding-left-right();
     }
+
     .basic-details {
         display: flex;
         gap: 15px;
         flex-direction: column;
+
         @include mymedia(800px) {
             flex-direction: row;
         }
+
         @include mymedia(1100px) {
             gap: 100px;
         }
+
         .basci-info {
             flex: 1;
             padding: 50px 0px;
             order: 2;
-            @include mymedia(800px){
+
+            @include mymedia(800px) {
                 order: 1;
             }
+
             h3 {
                 margin-bottom: 25px;
                 font-size: 1.7rem;
 
+                a {
+                    color: c.$iist-black;
+                    text-decoration: none;
+                }
+
                 @include mymedia(768px) {
                     font-size: 2rem;
                 }
+
                 @include mymedia(1359px) {
                     font-size: 3rem;
                 }
+
                 small {
                     display: block;
                     font-size: 1.1rem;
                     margin-top: 7px;
                 }
             }
+
             .contact-info-list {
                 ul {
                     @include unorder-list();
+
                     li {
                         padding: 5px 0px;
+                        display: flex;
+                        gap: 10px;
+
+                        a {
+                            color: c.$iist-black;
+                            text-decoration: none;
+                        }
                     }
                 }
             }
+
             .third-party-link {
                 margin: 30px 0px;
+
                 ul {
                     @include unorder-list();
                     display: flex;
                     gap: 15px;
+
                     li {
                         padding: 0px;
+
                         img {
                             width: 30px;
                         }
                     }
                 }
             }
+
             .others-links {
                 ul {
                     @include unorder-list();
+
                     li {
                         padding: 0px;
                         display: flex;
                         gap: 6px;
+
                         &::before {
                             content: "\f285";
                             font-family: bootstrap-icons !important;
                         }
+
                         a {
                             color: c.$iist-black;
                         }
@@ -164,13 +231,16 @@
                 }
             }
         }
+
         .profile-pic {
             position: relative;
             width: 30%;
             order: 1;
-            @include mymedia(800px){
+
+            @include mymedia(800px) {
                 order: 2;
             }
+
             .overlay {
                 position: absolute;
                 bottom: 0;
@@ -184,6 +254,7 @@
                 justify-content: end;
                 align-items: end;
                 gap: 10px;
+
                 a {
                     border: 1px solid c.$iitbc-white;
                     width: 50px;
@@ -198,17 +269,21 @@
             }
         }
     }
+
     .education-course-section {
         @include padding-left-right();
         @include padding-top-bottom();
+
         .container-fluid {
             display: flex;
             flex-direction: column;
             gap: 20px;
+
             @include mymedia(1359px) {
                 gap: 50px;
                 flex-direction: row;
             }
+
             @include mymedia(1600px) {
                 gap: 100px;
             }
@@ -217,17 +292,22 @@
                 font-size: 2.3rem;
                 margin-bottom: 25px;
             }
+
             .education {
                 flex: 1;
+
                 ul {
                     @include unorder-list();
-                    li {
+
+                    .field__item {
                         padding: 15px 0px;
                         border-bottom: 1px solid #ccc;
                         font-size: 1.1rem;
+
                         &:first-child {
                             padding-top: 0px;
                         }
+
                         &:last-child {
                             border-bottom: 0px;
                             padding-bottom: 0px;
@@ -235,17 +315,22 @@
                     }
                 }
             }
+
             .course {
                 flex: 1;
+
                 ul {
                     @include unorder-list();
-                    li {
+
+                    .field__item {
                         padding: 10px 0px;
 
                         font-size: 1.1rem;
+
                         &:first-child {
                             padding-top: 0px;
                         }
+
                         &:last-child {
                             border-bottom: 0px;
                             padding-bottom: 0px;
@@ -255,6 +340,7 @@
             }
         }
     }
+
     .fac-research-section {
         background-color: c.$iitbc-primary-color;
         @include padding-left-right();
@@ -266,50 +352,59 @@
                 font-size: 2.3rem;
                 margin-bottom: 25px;
             }
+
             .facilty-research-list {
-                ul {
-                    @include unorder-list();
-                    li {
-                        display: flex;
+                .field__item {
+                    padding: 30px 0px;
 
-                        padding: 30px 0px;
-                        flex-direction: column;
-                        gap: 15px;
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0px;
+                    }
+
+                }
+
+                .research-work {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    @include mymedia(768px) {
+                        flex-direction: row;
+                        gap: 70px;
+                    }
+
+                    .research-desc {
+                        flex: 1;
+                    }
+
+                    .research-img {
                         @include mymedia(768px) {
-                            flex-direction: row;
-                            gap: 70px;
-                        }
-
-                        &:first-child {
-                            padding-top: 0px;
-                        }
-                        &:last-child {
-                            padding-bottom: 0px;
-                        }
-                        .research-desc {
-                            flex: 1;
-                        }
-                        .research-img {
-                            @include mymedia(768px) {
-                                width: 20%;
-                            }
+                            width: 20%;
                         }
                     }
                 }
             }
+
             hr {
                 margin-top: 40px;
                 margin-bottom: 40px;
                 border-width: 5px;
             }
+
             .research-area {
                 .research-area-grid {
                     display: grid;
                     grid-template-columns: repeat(1, 1fr);
                     grid-gap: 30px;
+
                     @include mymedia(768px) {
                         grid-template-columns: repeat(2, 1fr);
                     }
+
                     @include mymedia(1359px) {
                         grid-template-columns: repeat(4, 1fr);
                     }
@@ -318,10 +413,12 @@
                         .img-box {
                             position: relative;
                             overflow: hidden;
+
                             img {
                                 transition: all 0.5s;
                                 width: 100%;
                             }
+
                             a {
                                 position: absolute;
                                 bottom: 0;
@@ -337,6 +434,7 @@
                                 padding: 25px;
                             }
                         }
+
                         &:hover {
                             .img-box {
                                 img {
@@ -349,6 +447,7 @@
             }
         }
     }
+
     .award-section {
         @include padding-left-right();
         @include padding-top-bottom();
@@ -358,44 +457,245 @@
             gap: 20px;
 
             flex-direction: column;
+
             @include mymedia(1024px) {
                 flex-direction: row;
                 align-items: center;
             }
+
             @include mymedia(1295px) {
                 gap: 40px;
             }
+
             @include mymedia(1600px) {
                 gap: 100px;
             }
+
             .award-img {
                 flex: 1;
             }
+
             .awars-list {
                 flex: 1;
+
                 h3 {
                     font-size: 2.3rem;
                     margin-bottom: 25px;
                 }
-                ul {
-                    @include unorder-list();
-                    li {
-                        padding: 15px 0px;
 
-                        border-bottom: 1px solid #ccc;
-                        @include mymedia(1600px) {
-                            font-size: 1.3rem;
-                        }
-                        &:first-child {
-                            padding-top: 0px;
-                        }
-                        &:last-child {
-                            padding-bottom: 0px;
-                            border-bottom: 0px;
-                        }
+                .field__item {
+                    padding: 15px 0px;
+                    border-bottom: 1px solid #ccc;
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0px;
+                        border-bottom: 0px;
                     }
                 }
             }
         }
     }
+}
+
+.announcement-listing-page {
+    .list-annocuement {
+        .views-row {
+            margin: 40px 0px;
+
+            &:first-child {
+                margin-top: 0px;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            .ann-teaser {
+                display: flex;
+                gap: 40px;
+
+                .announcement-img {
+                    width: 30%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: all 0.5s;
+                    }
+                }
+
+                .ann-teaser-wrapper {
+                    flex: 1;
+
+                    h3 {
+                        font-family: f.$roboto-medium;
+
+                        a {
+                            color: c.$iitbc-primary-color;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .more-link {
+                        @include more-link(#909090, c.$iitbc-primary-color);
+                    }
+                }
+            }
+
+            &:hover {
+                .ann-teaser {
+                    .announcement-img {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .js-pager__items {
+        @include unorder-list();
+        margin-top: 20px;
+
+        .pager__item {
+            .button {
+                @include explore-more(c.$iitbc-primary-color, c.$iitbc-primary-color);
+            }
+        }
+    }
+}
+
+
+.research-highlights-listing {
+    .views-infinite-scroll-content-wrapper {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .views-row {
+
+            .research-teaser {
+                position: relative;
+
+                .research-img {
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: all 0.5s;
+                    }
+                }
+
+                .research-teaser-wrapper {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 20px;
+                    color: rgb(255, 255, 255);
+                    top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    background: rgb(67, 47, 108);
+                    background: linear-gradient(180deg, rgba(67, 47, 108, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
+                    h3 {
+                        font-family: f.$roboto-medium;
+
+                        a {
+                            color: c.$iitbc-white;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .ann-description {
+                        .more-link {
+                            margin-top: 15px;
+
+                            a {
+                                @include explore-more(c.$iitbc-white, c.$iitbc-white);
+
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &:hover {
+                .research-teaser {
+                    .research-img {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .research-teaser-wrapper {
+                    h3 {
+                        a {
+                            color: c.$iitbc-secondary-color;
+                        }
+                    }
+                }
+
+                .more-link {
+                    a {
+                        background-color: c.$iitbc-secondary-color;
+                        color: c.$iist-black !important;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .js-pager__items {
+        display: flex;
+        @include unorder-list();
+        justify-content: center;
+
+        .pager__item {
+            .button {
+                @include explore-more(c.$iitbc-primary-color, c.$iitbc-primary-color);
+            }
+        }
+    }
+}
+
+.event-calendar-table{
+        .fc-head{
+            background-color: c.$iitbc-primary-color;
+        }
+        .fc-unthemed th{
+            background-color: rgb(0 74 149);
+        }
+        .fc-body{
+            tr{
+                td{
+                    background-color: #fff ;
+                }
+                td.fc-today{
+                    background-color: c.$iitbc-primary-color;
+                }
+                td.fc-past{
+                    background: #efefef;
+                }
+               
+            }
+        }
+        .fc-scroller{
+            overflow: hidden !important;
+        }
 }

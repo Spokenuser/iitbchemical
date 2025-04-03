@@ -92,6 +92,26 @@
     }
 }
 
+@mixin more-link($color, $more-hover-color) {
+    margin-top: 15px;
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 8px;
+        color: #909090;
+        transition: all 0.5s ease;
+        &::after{
+            content: "\f138";
+            font-family: bootstrap-icons !important;
+            font-size: 1.2rem;
+        }
+        &:hover{
+            color: $more-hover-color;
+            gap: 12px;
+        }
+    }
+}
 
 body {
     font-family: f.$roboto-regular;
