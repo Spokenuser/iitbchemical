@@ -1,0 +1,79 @@
+uuid: 75d0eefc-8873-42bf-b779-faab4886549f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_page
+    - field.field.node.faculty_page.field_award_image
+    - field.field.node.faculty_page.field_awards_honors
+    - field.field.node.faculty_page.field_courses
+    - field.field.node.faculty_page.field_designation
+    - field.field.node.faculty_page.field_education
+    - field.field.node.faculty_page.field_email
+    - field.field.node.faculty_page.field_faculty_category
+    - field.field.node.faculty_page.field_link_to_detail_page
+    - field.field.node.faculty_page.field_mobile_number
+    - field.field.node.faculty_page.field_photo
+    - field.field.node.faculty_page.field_research
+    - field.field.node.faculty_page.field_research_areas
+    - field.field.node.faculty_page.field_social_links
+    - node.type.faculty_page
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.faculty_page.teaser_page
+targetEntityType: node
+bundle: faculty_page
+mode: teaser_page
+content:
+  field_designation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_mobile_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_award_image: true
+  field_awards_honors: true
+  field_courses: true
+  field_education: true
+  field_faculty_category: true
+  field_link_to_detail_page: true
+  field_research: true
+  field_research_areas: true
+  field_social_links: true
