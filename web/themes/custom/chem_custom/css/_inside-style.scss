@@ -516,10 +516,18 @@
             .ann-teaser {
                 display: flex;
                 gap: 40px;
+                flex-direction: column;
+                @include mymedia(1024px){
+                    flex-direction: row;
+                }
 
                 .announcement-img {
-                    width: 30%;
+                   
                     overflow: hidden;
+
+                    @include mymedia(1024px){
+                        width: 30%;
+                    }
 
                     img {
                         width: 100%;
@@ -577,13 +585,19 @@
     .views-infinite-scroll-content-wrapper {
         display: grid;
         gap: 40px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        @include mymedia(768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mymedia(1280px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         .views-row {
-
             .research-teaser {
                 position: relative;
-
+                border-radius: 15px;
+                overflow: hidden;
                 .research-img {
                     overflow: hidden;
 
@@ -696,6 +710,6 @@
             }
         }
         .fc-scroller{
-            overflow: hidden !important;
+            overflow: hidden !important;    
         }
 }
