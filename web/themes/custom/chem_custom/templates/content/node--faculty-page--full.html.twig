@@ -81,47 +81,64 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                 <h3>{{ label }} 
                     <small>{{ content.field_designation }}</small>
                 </h3>
+                {% if content.field_mobile_number.0 or content.field_email.0 %}
                 <div class="contact-info-list">
                     <ul>
+                      {% if content.field_mobile_number.0 %}
                         <li><i class="bi bi-telephone"></i> {{ content.field_mobile_number }}</li>
+                        {% endif %}
+                        {% if content.field_email.0 %}
                         <li><i class="bi bi-envelope"></i> {{ content.field_email }}</li>
+                        {% endif %}
                     </ul>
                 </div>
+                {% endif %}
+                {% if content.field_google_scholar_id.0 or content.field_scopus_id.0 or content.field_orcid.0 %}
                 <div class="third-party-link">
                     <ul>
-                        {% if content.field_scholar_profile %}
-                        <li><a href="{{ content.field_scholar_profile.uri }}"><img src="{{ directory }}/assets/images/scholar.jpeg" alt="Scholar Profile"></a></li>
+                        {% if content.field_google_scholar_id.0 %}
+                        <li><a href="https://scholar.google.co.in/citations?user={{ content.field_google_scholar_id.0['#context'].value }}"><img src="/themes/custom/chem_custom/assets/images/scholar.jpeg" alt="Scholar Profile"></a></li>
                         {% endif %}
-                        {% if content.field_scopus_profile %}
-                        <li><a href="{{ content.field_scopus_profile.uri }}"><img src="{{ directory }}/assets/images/scopus.png" alt="Scopus Profile"></a></li>
+                        {% if content.field_scopus_id.0 %}
+                        <li><a href="https://www.scopus.com/authid/detail.uri?authorId={{ field_scopus_id.0['#context'].value }}"><img src="/themes/custom/chem_custom/assets/images/scopus.png" alt="Scopus Profile"></a></li>
                         {% endif %}
-                        {% if content.field_orcid_profile %}
-                        <li><a href="{{ content.field_orcid_profile.uri }}"><img src="{{ directory }}/assets/images/orcid.png" alt="ORCID Profile"></a></li>
+                        {% if content.field_orcid.0 %}
+                        {% set orchid = 'https://orcid.org/'~ content.field_orcid.0['#context'].value %}
+                        <li><a href="{{ orchid }}"><img src="/themes/custom/chem_custom/assets/images/orcid.png" alt="ORCID Profile"></a></li>
                         {% endif %}
                     </ul>
                 </div>
+                {% endif %}
+                {% if content.field_link_to_detail_page %}
                 <div class="others-links">
-                    {% if content.field_link_to_detail_page %}
                     <ul>
                         <li><a href="{{ content.field_link_to_detail_page.uri }}">Detailed Information/Research Group Web-Page</a></li>
                     </ul>
-                    {% endif %}
                 </div>
+                {% endif %}
             </div>
             <div class="profile-pic">
                 {% if content.field_photo %}
                 <img src="{{ file_url(content.field_photo['#items'].entity.field_media_image.entity|file_url) }}" class="w-100" alt="Faculty Photo">
                 {% endif %}
+                {% if content.field_mobile_number.0 or content.field_email.0 %}
                 <div class="overlay">
+                  {% if content.field_mobile_number.0 %}
                     <a href=""><i class="bi bi-telephone"></i></a>
+                    {% endif %}
+                    {% if content.field_email.0 %}
                     <a href=""><i class="bi bi-envelope"></i></a>
+                    {% endif %}
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
+{% if content.field_education.0 is not empty or content.field_courses.0 is not empty %}
 <div class="education-course-section">
   <div class="container-fluid">
+    {% if content.field_education.0 is not empty %}
       <div class="education">
           <h3>Education</h3>
           <div class="education-list">
@@ -130,28 +147,39 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
               </ul>
           </div>
       </div>
+      {% endif %}
+      {% if content.field_courses.0 is not empty %}
       <div class="course">
           <h3>Courses</h3>
           <ul>
             {{ content.field_courses }}
           </ul>
       </div>
+      {% endif %}
   </div>
 </div>
-
+{% endif %}
+{% if content.field_research.0 is not empty or content.field_research_areas.0 is not empty %}
 <div class="fac-research-section">
   <div class="container-fluid">
+    {% if content.field_research.0 is not empty %}
       <div class="facilty-research-list">
           <h3>Research</h3>
             {{ (content.field_research) }}
       </div>
       <hr>
+      {% endif %}
+
+    {% if content.field_research_areas.0 is not empty %}
       <div class="research-area">
           <h3>Research Areas</h3>
             {{ content.field_research_areas }}
       </div>
+      {% endif %}
   </div>
 </div>
+{% endif %}
+{% if content.field_awards_honors.0 is not empty %}
 <div class="award-section">
     <div class="container-fluid">
         <div class="award-img">
@@ -163,4 +191,5 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
         </div>
     </div>
 </div>
+{% endif %}
   </article>
