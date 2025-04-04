@@ -1091,7 +1091,7 @@ header .container-fluid .navbar-nav .dropdown-menu {
   box-shadow: none;
 }
 header .container-fluid .navbar-nav .dropdown-menu .dropdown-item {
-  padding: 0px 15px;
+  padding: 10px 15px;
 }
 header .container-fluid .navbar-nav .dropdown-menu .dropdown-item a {
   color: rgb(255, 255, 255);
