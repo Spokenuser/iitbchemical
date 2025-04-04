@@ -121,8 +121,8 @@ third_party_settings:
           section_classes: ''
           section_attributes: null
           regions_classes:
-            blb_region_col_1: ''
-            blb_region_col_2: ''
+            blb_region_col_1: anno-details-left
+            blb_region_col_2: latest-announcement-wrapper
           regions_attributes:
             blb_region_col_1: null
             blb_region_col_2: null
@@ -266,7 +266,9 @@ third_party_settings:
               items_per_page: none
             weight: 0
             additional: {  }
-        third_party_settings: {  }
+        third_party_settings:
+          layout_builder_lock:
+            lock: {  }
       -
         layout_id: 'bootstrap_layout_builder:blb_col_2'
         layout_settings:

@@ -10,12 +10,14 @@ dependencies:
     - field.field.node.faculty_page.field_education
     - field.field.node.faculty_page.field_email
     - field.field.node.faculty_page.field_faculty_category
+    - field.field.node.faculty_page.field_google_scholar_id
     - field.field.node.faculty_page.field_link_to_detail_page
     - field.field.node.faculty_page.field_mobile_number
+    - field.field.node.faculty_page.field_orcid
     - field.field.node.faculty_page.field_photo
     - field.field.node.faculty_page.field_research
     - field.field.node.faculty_page.field_research_areas
-    - field.field.node.faculty_page.field_social_links
+    - field.field.node.faculty_page.field_scopus_id
     - node.type.faculty_page
   module:
     - field_group
@@ -31,7 +33,6 @@ third_party_settings:
         - field_mobile_number
         - field_email
         - field_link_to_detail_page
-        - field_social_links
       label: Contacts
       region: content
       parent_name: ''
@@ -63,6 +64,20 @@ third_party_settings:
         label_as_html: false
         description: ''
         required_fields: false
+    group_social_links:
+      children: {  }
+      label: 'Social Links'
+      region: hidden
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
 id: node.faculty_page.default
 targetEntityType: node
 bundle: faculty_page
@@ -135,6 +150,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_google_scholar_id:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_link_to_detail_page:
     type: link_default
     weight: 14
@@ -148,6 +171,14 @@ content:
     weight: 12
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_orcid:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_photo:
@@ -181,13 +212,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_social_links:
-    type: link_default
-    weight: 15
+  field_scopus_id:
+    type: string_textfield
+    weight: 28
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

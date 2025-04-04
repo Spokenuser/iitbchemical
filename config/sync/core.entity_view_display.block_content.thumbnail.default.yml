@@ -1,0 +1,26 @@
+uuid: d552cc49-7fae-4d22-bc25-db5afc725209
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.thumbnail
+    - field.field.block_content.thumbnail.field_only_images
+  module:
+    - media
+id: block_content.thumbnail.default
+targetEntityType: block_content
+bundle: thumbnail
+mode: default
+content:
+  field_only_images:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

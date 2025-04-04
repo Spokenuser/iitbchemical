@@ -1,0 +1,27 @@
+uuid: 2f422f3a-ed42-4e21-aa44-2d16360b2cd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_scholar_id
+    - node.type.faculty_page
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+      teaser_page: 0
+id: node.faculty_page.field_google_scholar_id
+field_name: field_google_scholar_id
+entity_type: node
+bundle: faculty_page
+label: 'Google scholar Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

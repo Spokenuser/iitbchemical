@@ -1,31 +1,26 @@
-uuid: 06204404-1b75-4c22-a3e5-9e3aaea195b3
+uuid: 42010d37-8864-4456-bc66-2180705768ae
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_image
+    - block_content.type.thumbnail
+    - field.storage.block_content.field_only_images
     - media.type.image
-    - taxonomy.vocabulary.research_area
-  content:
-    - 'media:image:491333f5-fc4d-4e7a-adcb-1fbb5621d8cc'
   module:
     - view_mode_conditional_fields
 third_party_settings:
   view_mode_conditional_fields:
     field_visibility_display:
       default: 0
-id: taxonomy_term.research_area.field_image
-field_name: field_image
-entity_type: taxonomy_term
-bundle: research_area
-label: Image
+id: block_content.thumbnail.field_only_images
+field_name: field_only_images
+entity_type: block_content
+bundle: thumbnail
+label: 'Only images'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    target_uuid: 491333f5-fc4d-4e7a-adcb-1fbb5621d8cc
-    weight: 0
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'

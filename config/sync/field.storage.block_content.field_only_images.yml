@@ -1,13 +1,13 @@
-uuid: 9a6959b1-365a-45a7-9364-1e2f30354993
+uuid: f9a06e2b-4e64-45ed-ab8c-a01a57a8a8ce
 langcode: en
 status: true
 dependencies:
   module:
+    - block_content
     - media
-    - taxonomy
-id: taxonomy_term.field_image
-field_name: field_image
-entity_type: taxonomy_term
+id: block_content.field_only_images
+field_name: field_only_images
+entity_type: block_content
 type: entity_reference
 settings:
   target_type: media

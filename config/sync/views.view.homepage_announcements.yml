@@ -461,7 +461,13 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
       defaults:
+        pager: false
         footer: false
       footer:
         area:

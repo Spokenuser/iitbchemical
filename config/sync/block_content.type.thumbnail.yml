@@ -1,0 +1,8 @@
+uuid: df8c6084-e7bf-4828-8ee9-f7a4798c9422
+langcode: en
+status: true
+dependencies: {  }
+id: thumbnail
+label: Thumbnail
+revision: false
+description: null

@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.faculty_page.field_education
     - field.field.node.faculty_page.field_email
     - field.field.node.faculty_page.field_faculty_category
+    - field.field.node.faculty_page.field_google_scholar_id
     - field.field.node.faculty_page.field_link_to_detail_page
     - field.field.node.faculty_page.field_mobile_number
+    - field.field.node.faculty_page.field_orcid
     - field.field.node.faculty_page.field_photo
     - field.field.node.faculty_page.field_research
     - field.field.node.faculty_page.field_research_areas
-    - field.field.node.faculty_page.field_social_links
+    - field.field.node.faculty_page.field_scopus_id
     - node.type.faculty_page
   module:
     - layout_builder
@@ -73,7 +75,9 @@ hidden:
   field_courses: true
   field_education: true
   field_faculty_category: true
+  field_google_scholar_id: true
   field_link_to_detail_page: true
+  field_orcid: true
   field_research: true
   field_research_areas: true
-  field_social_links: true
+  field_scopus_id: true
