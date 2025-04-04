@@ -387,6 +387,23 @@
 
                     .research-desc {
                         flex: 1;
+
+                        ul{
+                            @include unorder-list();
+
+                            li{
+                                padding: 3px 0px;
+                                display: flex;
+                                gap: 7px;
+                                a{
+                                    color: c.$iitbc-secondary-color;
+                                }
+                                &::before{
+                                    content: "\f285";
+                                    font-family: bootstrap-icons !important;
+                                }
+                            }
+                        }
                     }
 
                     .research-img {

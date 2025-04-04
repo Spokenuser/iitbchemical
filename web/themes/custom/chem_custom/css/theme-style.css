@@ -1079,7 +1079,7 @@ header .container-fluid .navbar-nav li a {
   color: #fff;
   text-decoration: none;
 }
-header .container-fluid .navbar-nav li a.show {
+header .container-fluid .navbar-nav li a.show, header .container-fluid .navbar-nav li a.active {
   color: rgb(192, 224, 89);
 }
 header .container-fluid .navbar-nav li:hover a, header .container-fluid .navbar-nav li:focus a, header .container-fluid .navbar-nav li.show a {
@@ -2553,6 +2553,23 @@ header.sticky {
 }
 .faculty-details-section .fac-research-section .container-fluid .facilty-research-list .research-work .research-desc {
   flex: 1;
+}
+.faculty-details-section .fac-research-section .container-fluid .facilty-research-list .research-work .research-desc ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.faculty-details-section .fac-research-section .container-fluid .facilty-research-list .research-work .research-desc ul li {
+  padding: 3px 0px;
+  display: flex;
+  gap: 7px;
+}
+.faculty-details-section .fac-research-section .container-fluid .facilty-research-list .research-work .research-desc ul li a {
+  color: rgb(192, 224, 89);
+}
+.faculty-details-section .fac-research-section .container-fluid .facilty-research-list .research-work .research-desc ul li::before {
+  content: "\f285";
+  font-family: bootstrap-icons !important;
 }
 @media (min-width: 768px) {
   .faculty-details-section .fac-research-section .container-fluid .facilty-research-list .research-work .research-img {

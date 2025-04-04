@@ -100,12 +100,13 @@ header {
                 a {
                     color: #fff;
                     text-decoration: none;
-                    &.show {
+                    &.show, &.active {
                         color: c.$iitbc-secondary-color;
                     }
                 }
 
                 &:hover,
+               
                 &:focus,
                 &.show {
                     a {
