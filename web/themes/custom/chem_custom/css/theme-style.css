@@ -2357,6 +2357,12 @@ header.sticky {
   position: relative;
   width: 30%;
   order: 1;
+  height: 420px;
+}
+.faculty-details-section .basic-details .profile-pic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 800px) {
   .faculty-details-section .basic-details .profile-pic {
@@ -2889,6 +2895,67 @@ header.sticky {
 }
 .event-calendar-table .fc-scroller {
   overflow: hidden !important;
+}
+
+.latest-announcement-wrapper .views-element-container {
+  background-color: #fff;
+  padding: 30px;
+}
+.latest-announcement-wrapper .views-element-container h2 {
+  font-size: 1.6rem;
+  font-family: "Roboto-Medium";
+  margin-bottom: 25px;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul li {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul li .info h6 {
+  font-size: 1.1rem;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul li .info h6 a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul li .info span {
+  color: #575757;
+  font-size: 1rem;
+  font-style: italic;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul li:first-child {
+  padding-top: 0px;
+}
+.latest-announcement-wrapper .views-element-container .item-list ul li:last-child {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+.latest-announcement-wrapper .views-element-container .view-footer {
+  margin-top: 40px;
+}
+.latest-announcement-wrapper .views-element-container .view-footer .explore-more {
+  border: 1px solid rgb(0, 79, 159);
+  text-decoration: none;
+  padding: 7px 25px;
+  border-radius: 50px;
+  color: rgb(0, 79, 159);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+}
+.latest-announcement-wrapper .views-element-container .view-footer .explore-more::after {
+  content: "\f138";
+  font-family: bootstrap-icons !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
 }
 
 footer {
