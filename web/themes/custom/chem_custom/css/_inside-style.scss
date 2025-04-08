@@ -67,11 +67,12 @@
             .fac-dp-pic {
                 overflow: hidden;
                 height: 380px;
-
+                display: flex;
+                align-items: flex-start;
                 img {
                     object-fit: cover;
                     width: 100%;
-                    height: 100%;
+                    min-height: 100%;
                     transition: all 1s;
                 }
             }
