@@ -2982,6 +2982,32 @@ header.sticky {
   gap: 20px;
 }
 
+.mission-statement-box .item {
+  background-color: #fff;
+  height: 100%;
+}
+.mission-statement-box .item .field--name-field-image-thum {
+  margin-bottom: 0px;
+}
+.mission-statement-box .item .field--name-field-image-thum img {
+  max-width: 100%;
+  height: auto;
+}
+.mission-statement-box .item .field--name-body {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.message-from-head img {
+  max-width: 100%;
+  height: auto;
+}
+
+.chemical-engineering-section img {
+  max-width: 100%;
+  height: auto;
+}
+
 footer {
   padding-left: 0px;
   padding-right: 0px;

@@ -817,3 +817,34 @@
 
     }
 }
+
+.mission-statement-box{
+    .item{
+        background-color: #fff;
+        height: 100%;
+        .field--name-field-image-thum{
+            margin-bottom: 0px;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .field--name-body{
+            background-color: #fff;
+            padding: 15px;
+        }
+    }
+}
+
+.message-from-head{
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+.chemical-engineering-section{
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
