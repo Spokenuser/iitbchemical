@@ -2197,11 +2197,13 @@ header.sticky {
 .view-faculty-listing .view-content .views-row .fac-dp-pic {
   overflow: hidden;
   height: 380px;
+  display: flex;
+  align-items: flex-start;
 }
 .view-faculty-listing .view-content .views-row .fac-dp-pic img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   transition: all 1s;
 }
 .view-faculty-listing .view-content .views-row .body {
@@ -2978,6 +2980,32 @@ header.sticky {
   display: inline-flex;
   align-items: center;
   gap: 20px;
+}
+
+.mission-statement-box .item {
+  background-color: #fff;
+  height: 100%;
+}
+.mission-statement-box .item .field--name-field-image-thum {
+  margin-bottom: 0px;
+}
+.mission-statement-box .item .field--name-field-image-thum img {
+  max-width: 100%;
+  height: auto;
+}
+.mission-statement-box .item .field--name-body {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.message-from-head img {
+  max-width: 100%;
+  height: auto;
+}
+
+.chemical-engineering-section img {
+  max-width: 100%;
+  height: auto;
 }
 
 footer {
