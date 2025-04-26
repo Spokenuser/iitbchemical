@@ -1,0 +1,35 @@
+uuid: 0df15ffb-185e-4f0e-bc56-f7064e9bde4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.publication
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.publication.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: publication
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

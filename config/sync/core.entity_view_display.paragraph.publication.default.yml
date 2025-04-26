@@ -1,0 +1,51 @@
+uuid: 8f969c58-79d6-4134-a055-c1f382189487
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_detail_description
+    - field.field.paragraph.publication.field_document
+    - field.field.paragraph.publication.field_image
+    - field.field.paragraph.publication.field_title
+    - paragraphs.paragraphs_type.publication
+  module:
+    - text
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_detail_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_document:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

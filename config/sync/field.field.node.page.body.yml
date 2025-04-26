@@ -4,9 +4,17 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - filter.format.full_html
     - node.type.page
   module:
     - text
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+      teaser_page: 0
 _core:
   default_config_hash: KHu9I-pR4FnP79crRJ5gVD_1mKGSZcJsdIm9bn64iFg
 id: node.page.body
@@ -22,5 +30,6 @@ default_value_callback: ''
 settings:
   display_summary: true
   required_summary: false
-  allowed_formats: {  }
+  allowed_formats:
+    - full_html
 field_type: text_with_summary

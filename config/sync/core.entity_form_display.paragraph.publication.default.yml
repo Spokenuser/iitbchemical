@@ -1,0 +1,51 @@
+uuid: 4fa1dacf-9f4c-4555-87db-2b6ef4ae19ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_detail_description
+    - field.field.paragraph.publication.field_document
+    - field.field.paragraph.publication.field_image
+    - field.field.paragraph.publication.field_title
+    - paragraphs.paragraphs_type.publication
+  module:
+    - media_library
+    - text
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_detail_description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_document:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

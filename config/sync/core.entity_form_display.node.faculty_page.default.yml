@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.faculty_page.comment
     - field.field.node.faculty_page.field_award_image
     - field.field.node.faculty_page.field_awards_honors
+    - field.field.node.faculty_page.field_building
     - field.field.node.faculty_page.field_courses
     - field.field.node.faculty_page.field_designation
     - field.field.node.faculty_page.field_education
@@ -17,9 +19,12 @@ dependencies:
     - field.field.node.faculty_page.field_photo
     - field.field.node.faculty_page.field_research
     - field.field.node.faculty_page.field_research_areas
+    - field.field.node.faculty_page.field_room_number
     - field.field.node.faculty_page.field_scopus_id
     - node.type.faculty_page
   module:
+    - autocomplete_deluxe
+    - comment
     - field_group
     - link
     - media_library
@@ -30,6 +35,8 @@ third_party_settings:
   field_group:
     group_contacts:
       children:
+        - field_building
+        - field_room_number
         - field_mobile_number
         - field_email
         - field_link_to_detail_page
@@ -83,6 +90,12 @@ targetEntityType: node
 bundle: faculty_page
 mode: default
 content:
+  comment:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 2
@@ -114,6 +127,14 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_building:
+    type: string_textfield
+    weight: 127
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_courses:
     type: string_textarea
     weight: 14
@@ -138,7 +159,7 @@ content:
     third_party_settings: {  }
   field_email:
     type: email_default
-    weight: 13
+    weight: 130
     region: content
     settings:
       placeholder: ''
@@ -160,7 +181,7 @@ content:
     third_party_settings: {  }
   field_link_to_detail_page:
     type: link_default
-    weight: 14
+    weight: 131
     region: content
     settings:
       placeholder_url: ''
@@ -168,7 +189,7 @@ content:
     third_party_settings: {  }
   field_mobile_number:
     type: telephone_default
-    weight: 12
+    weight: 129
     region: content
     settings:
       placeholder: ''
@@ -207,10 +228,29 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_research_areas:
-    type: options_buttons
+    type: autocomplete_deluxe
     weight: 16
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      match_limit: 10
+      min_length: 0
+      delimiter: ''
+      not_found_message_allow: false
+      not_found_message: "The term '@term' will be added"
+      new_terms: false
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  field_room_number:
+    type: string_textfield
+    weight: 128
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_scopus_id:
     type: string_textfield

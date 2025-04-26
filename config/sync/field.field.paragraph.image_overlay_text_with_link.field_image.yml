@@ -1,0 +1,35 @@
+uuid: 6fd0b52f-2ff0-4532-89ae-f11f386d7d17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.image_overlay_text_with_link
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.image_overlay_text_with_link.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: image_overlay_text_with_link
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

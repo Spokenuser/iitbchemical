@@ -1,0 +1,10 @@
+uuid: 8eb2bdce-76e7-41a7-99cc-0421ad291bf7
+langcode: en
+status: true
+dependencies: {  }
+id: image_overlay_text_with_link
+label: 'Image overlay text with link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

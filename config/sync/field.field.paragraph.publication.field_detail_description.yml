@@ -1,0 +1,27 @@
+uuid: 7d316d46-5ebb-4b09-a162-97b205fa8b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_detail_description
+    - paragraphs.paragraphs_type.publication
+  module:
+    - text
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.publication.field_detail_description
+field_name: field_detail_description
+entity_type: paragraph
+bundle: publication
+label: 'Detail description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

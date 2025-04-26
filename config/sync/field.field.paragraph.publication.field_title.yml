@@ -1,0 +1,25 @@
+uuid: c7a3ef19-e39c-4945-bfe7-80e46f8f6018
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.publication
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.publication.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: publication
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.faculty_page.comment
     - field.field.node.faculty_page.field_award_image
     - field.field.node.faculty_page.field_awards_honors
+    - field.field.node.faculty_page.field_building
     - field.field.node.faculty_page.field_courses
     - field.field.node.faculty_page.field_designation
     - field.field.node.faculty_page.field_education
@@ -17,9 +20,11 @@ dependencies:
     - field.field.node.faculty_page.field_photo
     - field.field.node.faculty_page.field_research
     - field.field.node.faculty_page.field_research_areas
+    - field.field.node.faculty_page.field_room_number
     - field.field.node.faculty_page.field_scopus_id
     - node.type.faculty_page
   module:
+    - comment
     - entity_reference_revisions
     - link
     - telephone
@@ -29,6 +34,15 @@ targetEntityType: node
 bundle: faculty_page
 mode: default
 content:
+  comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 110
+    region: content
   field_award_image:
     type: entity_reference_entity_view
     label: above
@@ -46,6 +60,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 115
+    region: content
+  field_building:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
     region: content
   field_courses:
     type: basic_string
@@ -145,6 +167,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 114
+    region: content
+  field_room_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
     region: content
   field_scopus_id:
     type: string

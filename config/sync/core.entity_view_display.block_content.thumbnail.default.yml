@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.thumbnail
     - field.field.block_content.thumbnail.field_only_images
+    - image.style.max_650x650
   module:
     - media
 id: block_content.thumbnail.default
@@ -17,7 +18,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: max_650x650
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.faculty_page.comment
     - field.field.node.faculty_page.field_award_image
     - field.field.node.faculty_page.field_awards_honors
+    - field.field.node.faculty_page.field_building
     - field.field.node.faculty_page.field_courses
     - field.field.node.faculty_page.field_designation
     - field.field.node.faculty_page.field_education
@@ -18,6 +20,7 @@ dependencies:
     - field.field.node.faculty_page.field_photo
     - field.field.node.faculty_page.field_research
     - field.field.node.faculty_page.field_research_areas
+    - field.field.node.faculty_page.field_room_number
     - field.field.node.faculty_page.field_scopus_id
     - node.type.faculty_page
   module:
@@ -33,8 +36,10 @@ content:
     weight: 100
     region: content
 hidden:
+  comment: true
   field_award_image: true
   field_awards_honors: true
+  field_building: true
   field_courses: true
   field_designation: true
   field_education: true
@@ -47,4 +52,5 @@ hidden:
   field_photo: true
   field_research: true
   field_research_areas: true
+  field_room_number: true
   field_scopus_id: true

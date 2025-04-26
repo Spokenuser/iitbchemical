@@ -1,11 +1,11 @@
-uuid: 791575b3-098e-481d-895b-51de463a5326
+uuid: 217e5069-e7e7-468c-9c24-1967b3cc8903
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_research_areas
-    - node.type.faculty_page
-    - taxonomy.vocabulary.research_area
+    - field.storage.node.field_featured_image
+    - media.type.image
+    - node.type.page
   module:
     - view_mode_conditional_fields
 third_party_settings:
@@ -14,24 +14,24 @@ third_party_settings:
       default: 0
       teaser: 0
       teaser_page: 0
-id: node.faculty_page.field_research_areas
-field_name: field_research_areas
+id: node.page.field_featured_image
+field_name: field_featured_image
 entity_type: node
-bundle: faculty_page
-label: 'Research Areas'
+bundle: page
+label: 'Featured Image'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      research_area: research_area
+      image: image
     sort:
-      field: name
-      direction: asc
+      field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
