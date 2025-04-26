@@ -1,0 +1,29 @@
+uuid: 24846f44-99df-495b-ba97-b3cea5d1546f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_display_style
+    - node.type.landing_page
+  module:
+    - options
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.landing_page.field_card_display_style
+field_name: field_card_display_style
+entity_type: node
+bundle: landing_page
+label: 'Card display style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: image_overlay
+default_value_callback: ''
+settings: {  }
+field_type: list_string

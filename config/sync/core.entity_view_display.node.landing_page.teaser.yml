@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_card_display_style
     - field.field.node.landing_page.field_image_text_with_link
     - node.type.landing_page
   module:
@@ -29,4 +30,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_card_display_style: true
   field_image_text_with_link: true

@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_card_display_style
     - field.field.node.landing_page.field_image_text_with_link
     - node.type.landing_page
   module:
     - entity_reference_revisions
+    - options
     - text
     - user
 id: node.landing_page.default
@@ -21,6 +23,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_card_display_style:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
     region: content
   field_image_text_with_link:
     type: entity_reference_revisions_entity_view
