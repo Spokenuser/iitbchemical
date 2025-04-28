@@ -3022,6 +3022,10 @@ header.sticky {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.5s;
+}
+.thum-grid .item:hover .img-box img {
+  transform: scale(1.5);
 }
 .thum-grid.image_overlay .item {
   position: relative;
