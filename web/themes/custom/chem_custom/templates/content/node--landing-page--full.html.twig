@@ -70,6 +70,7 @@
         not node.isPublished() ? 'node--unpublished',
         view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
         'landing-page',
+        content.field_card_display_style.0['#markup'],
         'clearfix',
       ]
     %}
