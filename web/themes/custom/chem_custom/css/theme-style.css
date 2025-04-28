@@ -3008,6 +3008,90 @@ header.sticky {
   height: auto;
 }
 
+.thum-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 25px;
+}
+.thum-grid .item .img-box {
+  height: 350px;
+  overflow: hidden;
+}
+.thum-grid .item .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thum-grid.image_overlay .item {
+  position: relative;
+}
+.thum-grid.image_overlay .item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+.thum-grid.image_overlay .item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, rgb(0, 0, 0) 100%);
+}
+.thum-grid.image_overlay .item .caption h3 {
+  color: #fff;
+}
+.thum-grid.title_on_hover .item {
+  position: relative;
+}
+.thum-grid.title_on_hover .item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+.thum-grid.title_on_hover .item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, rgb(0, 0, 0) 100%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.thum-grid.title_on_hover .item .caption h3 {
+  color: #fff;
+}
+.thum-grid.title_on_hover .item:hover .caption {
+  opacity: 100;
+}
+.thum-grid.title_in_bottom_of_image {
+  position: relative;
+}
+.thum-grid.title_in_bottom_of_image a {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.thum-grid.title_in_bottom_of_image .caption {
+  margin-top: 10px;
+}
+
 footer {
   padding-left: 0px;
   padding-right: 0px;
