@@ -3010,9 +3010,17 @@ header.sticky {
 
 .thum-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 40px;
   margin-bottom: 25px;
+}
+.thum-grid.three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+.thum-grid.four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+.thum-grid .item {
+  position: relative;
 }
 .thum-grid .item .img-box {
   height: 350px;
@@ -3025,7 +3033,7 @@ header.sticky {
   transition: all 0.5s;
 }
 .thum-grid .item:hover .img-box img {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .thum-grid.image_overlay .item {
   position: relative;
@@ -3091,9 +3099,15 @@ header.sticky {
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 10;
 }
 .thum-grid.title_in_bottom_of_image .caption {
-  margin-top: 10px;
+  padding: 7px 10px;
+  background-color: rgb(0, 79, 159);
+}
+.thum-grid.title_in_bottom_of_image .caption h3 {
+  margin: 0px;
+  color: #fff;
 }
 
 footer {

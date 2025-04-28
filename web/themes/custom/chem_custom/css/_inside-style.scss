@@ -859,10 +859,18 @@
 
 .thum-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  
     grid-gap: 40px;
     margin-bottom: 25px;
+    &.three-column{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &.four-column{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
     .item {
+        position: relative;
         .img-box {
             height: 350px;
             overflow: hidden;
@@ -877,7 +885,7 @@
         &:hover{
             .img-box{
                 img{
-                    transform: scale(1.5);
+                    transform: scale(1.2);
                 }
             }
         }
@@ -952,9 +960,16 @@
             left: 0;
             bottom: 0;
             right:  0;
+            z-index: 10;
         }
         .caption{
-            margin-top: 10px;
+          padding: 7px 10px;
+            background-color:c.$iitbc-primary-color;
+            h3{
+                margin: 0px;
+                color: #fff;
+            }
         }
     }
+    
 }
