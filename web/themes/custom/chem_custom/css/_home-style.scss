@@ -367,6 +367,7 @@
                     @include mymedia(600px) {
                         width: 150px;
                         height: 113px;
+                        overflow: hidden;
                     }
                 }
 

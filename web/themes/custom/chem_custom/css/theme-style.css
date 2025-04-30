@@ -1748,6 +1748,7 @@ header.sticky {
   .events-section .events-grid .list-annocuement .field-content .img-box {
     width: 150px;
     height: 113px;
+    overflow: hidden;
   }
 }
 .events-section .events-grid .list-annocuement .field-content .info {
