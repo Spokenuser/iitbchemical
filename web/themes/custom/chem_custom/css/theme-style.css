@@ -1747,6 +1747,7 @@ header.sticky {
 @media (min-width: 600px) {
   .events-section .events-grid .list-annocuement .field-content .img-box {
     width: 150px;
+    height: 113px;
   }
 }
 .events-section .events-grid .list-annocuement .field-content .info {
