@@ -1001,6 +1001,8 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
+
         .img-box {
             height: 50px;
             width: 50px;
@@ -1011,6 +1013,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .yellow {
@@ -1018,6 +1027,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1028,6 +1038,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .black{
@@ -1035,6 +1052,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1045,6 +1063,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .green{
@@ -1052,6 +1077,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1062,6 +1088,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .light_green{
@@ -1069,6 +1102,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1079,6 +1113,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .aquia{
@@ -1086,6 +1127,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1096,6 +1138,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .light_purple{
@@ -1103,6 +1152,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1113,6 +1163,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     .dark_purple{
@@ -1120,6 +1177,7 @@
         display: flex;
         gap: 10px;
         border-radius: 10px;
+        padding: 20px;
         .img-box {
             height: 50px;
             width: 50px;
@@ -1130,6 +1188,13 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
+        }
+        &:hover{
+            .img-box{
+                img{
+                    transform:none;
+                }
+            }
         }
     }
     

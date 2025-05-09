@@ -3125,6 +3125,7 @@ header.sticky {
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .curriculum .img-box {
   height: 50px;
@@ -3136,11 +3137,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .curriculum:hover .img-box img {
+  transform: none;
+}
 .thum-grid .yellow {
   background-color: #E2A500;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .yellow .img-box {
   height: 50px;
@@ -3152,11 +3157,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .yellow:hover .img-box img {
+  transform: none;
+}
 .thum-grid .black {
   background-color: #20252D;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .black .img-box {
   height: 50px;
@@ -3168,11 +3177,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .black:hover .img-box img {
+  transform: none;
+}
 .thum-grid .green {
   background-color: #7CA333;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .green .img-box {
   height: 50px;
@@ -3184,11 +3197,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .green:hover .img-box img {
+  transform: none;
+}
 .thum-grid .light_green {
   background-color: #4C935B;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .light_green .img-box {
   height: 50px;
@@ -3200,11 +3217,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .light_green:hover .img-box img {
+  transform: none;
+}
 .thum-grid .aquia {
   background-color: #199EAA;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .aquia .img-box {
   height: 50px;
@@ -3216,11 +3237,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .aquia:hover .img-box img {
+  transform: none;
+}
 .thum-grid .light_purple {
   background-color: #3F4974;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .light_purple .img-box {
   height: 50px;
@@ -3232,11 +3257,15 @@ header.sticky {
   flex: 1;
   padding: 0px !important;
 }
+.thum-grid .light_purple:hover .img-box img {
+  transform: none;
+}
 .thum-grid .dark_purple {
   background-color: #573C56;
   display: flex;
   gap: 10px;
   border-radius: 10px;
+  padding: 20px;
 }
 .thum-grid .dark_purple .img-box {
   height: 50px;
@@ -3247,6 +3276,9 @@ header.sticky {
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .dark_purple:hover .img-box img {
+  transform: none;
 }
 
 .mission-statement-section .img-box img {
