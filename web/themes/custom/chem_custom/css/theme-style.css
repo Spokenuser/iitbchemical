@@ -3126,16 +3126,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .curriculum .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .curriculum .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .curriculum .caption h3 {
+  margin: 0px;
 }
 .thum-grid .curriculum:hover .img-box img {
   transform: none;
@@ -3146,16 +3150,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .yellow .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .yellow .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .yellow .caption h3 {
+  margin: 0px;
 }
 .thum-grid .yellow:hover .img-box img {
   transform: none;
@@ -3166,16 +3174,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .black .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .black .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .black .caption h3 {
+  margin: 0px;
 }
 .thum-grid .black:hover .img-box img {
   transform: none;
@@ -3186,16 +3198,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .green .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .green .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .green .caption h3 {
+  margin: 0px;
 }
 .thum-grid .green:hover .img-box img {
   transform: none;
@@ -3206,16 +3222,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .light_green .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .light_green .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .light_green .caption h3 {
+  margin: 0px;
 }
 .thum-grid .light_green:hover .img-box img {
   transform: none;
@@ -3226,16 +3246,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .aquia .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .aquia .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .aquia .caption h3 {
+  margin: 0px;
 }
 .thum-grid .aquia:hover .img-box img {
   transform: none;
@@ -3246,16 +3270,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .light_purple .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .light_purple .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .light_purple .caption h3 {
+  margin: 0px;
 }
 .thum-grid .light_purple:hover .img-box img {
   transform: none;
@@ -3266,16 +3294,20 @@ header.sticky {
   gap: 10px;
   border-radius: 10px;
   padding: 20px;
+  align-items: center;
 }
 .thum-grid .dark_purple .img-box {
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
 }
 .thum-grid .dark_purple .caption {
   position: relative !important;
   background: none !important;
   flex: 1;
   padding: 0px !important;
+}
+.thum-grid .dark_purple .caption h3 {
+  margin: 0px;
 }
 .thum-grid .dark_purple:hover .img-box img {
   transform: none;
