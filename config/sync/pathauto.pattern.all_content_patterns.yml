@@ -9,10 +9,10 @@ label: 'All content patterns'
 type: 'canonical_entities:node'
 pattern: '[node:content-type:name]/[node:title]'
 selection_criteria:
-  e45b875a-1c44-4789-95f3-1ee2677cb303:
+  df260929-e454-47d0-a8d1-776e021f795d:
     id: 'entity_bundle:node'
     negate: false
-    uuid: e45b875a-1c44-4789-95f3-1ee2677cb303
+    uuid: df260929-e454-47d0-a8d1-776e021f795d
     context_mapping:
       node: node
     bundles:
@@ -20,9 +20,11 @@ selection_criteria:
       article: article
       event: event
       faculty_page: faculty_page
+      landing_page: landing_page
       page: page
       people: people
       research: research
+      staff: staff
 selection_logic: and
 weight: -5
 relationships: {  }

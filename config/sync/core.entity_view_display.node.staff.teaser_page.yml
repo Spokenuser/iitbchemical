@@ -1,0 +1,55 @@
+uuid: bf26f5f9-e752-47be-931d-f013a2257b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_page
+    - field.field.node.staff.body
+    - field.field.node.staff.field_email
+    - field.field.node.staff.field_functional_area_ddl
+    - field.field.node.staff.field_lab_number
+    - field.field.node.staff.field_mobile_number
+    - field.field.node.staff.field_photo
+    - field.field.node.staff.field_staff_designation
+    - node.type.staff
+  module:
+    - user
+id: node.staff.teaser_page
+targetEntityType: node
+bundle: staff
+mode: teaser_page
+content:
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_mobile_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_functional_area_ddl: true
+  field_lab_number: true
+  field_staff_designation: true

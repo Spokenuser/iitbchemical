@@ -1,0 +1,9 @@
+uuid: ffffa693-bb83-49ae-85d8-8f6f5b746db6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Staff Functional Area (DDL)'
+vid: staff_functional_area_ddl
+description: null
+weight: 0
+new_revision: false

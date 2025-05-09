@@ -1,0 +1,83 @@
+uuid: 3e420755-f002-4456-bd7c-a48b79939164
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff.body
+    - field.field.node.staff.field_email
+    - field.field.node.staff.field_functional_area_ddl
+    - field.field.node.staff.field_lab_number
+    - field.field.node.staff.field_mobile_number
+    - field.field.node.staff.field_photo
+    - field.field.node.staff.field_staff_designation
+    - node.type.staff
+  module:
+    - telephone
+    - text
+    - user
+id: node.staff.default
+targetEntityType: node
+bundle: staff
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_functional_area_ddl:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_lab_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_mobile_number:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_staff_designation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,27 @@
+uuid: 4e368716-25d6-4693-b30b-dee42f232161
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_column_style
+    - node.type.landing_page
+  module:
+    - options
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+id: node.landing_page.field_column_style
+field_name: field_column_style
+entity_type: node
+bundle: landing_page
+label: 'Column style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

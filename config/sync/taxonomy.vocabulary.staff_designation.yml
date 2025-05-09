@@ -1,0 +1,9 @@
+uuid: c0aaab33-e43d-4130-be22-5be1aded9c10
+langcode: en
+status: true
+dependencies: {  }
+name: 'Staff Designation'
+vid: staff_designation
+description: null
+weight: 0
+new_revision: false

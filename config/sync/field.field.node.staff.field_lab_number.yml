@@ -1,0 +1,27 @@
+uuid: bab1e856-52e7-40a4-9e71-03a2435d0296
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lab_number
+    - node.type.staff
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+      teaser_page: 0
+id: node.staff.field_lab_number
+field_name: field_lab_number
+entity_type: node
+bundle: staff
+label: 'Lab Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

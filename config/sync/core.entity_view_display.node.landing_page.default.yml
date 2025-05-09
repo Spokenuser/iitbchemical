@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_card_display_style
+    - field.field.node.landing_page.field_column_style
     - field.field.node.landing_page.field_image_text_with_link
     - node.type.landing_page
   module:
@@ -30,6 +31,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_column_style:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_image_text_with_link:
     type: entity_reference_revisions_entity_view

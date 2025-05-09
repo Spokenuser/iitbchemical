@@ -1,0 +1,21 @@
+uuid: 89bab7ef-3466-428f-a79a-1f615dc3b813
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_lab_number
+field_name: field_lab_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

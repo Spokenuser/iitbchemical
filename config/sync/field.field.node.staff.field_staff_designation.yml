@@ -1,0 +1,37 @@
+uuid: 01378460-e07b-4a5f-a221-4d1d55d3073f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_designation
+    - node.type.staff
+    - taxonomy.vocabulary.staff_designation
+  module:
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+      teaser_page: 0
+id: node.staff.field_staff_designation
+field_name: field_staff_designation
+entity_type: node
+bundle: staff
+label: Designation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      staff_designation: staff_designation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

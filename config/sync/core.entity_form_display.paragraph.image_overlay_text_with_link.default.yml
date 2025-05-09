@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.image_overlay_text_with_link.field_icon
     - field.field.paragraph.image_overlay_text_with_link.field_image
     - field.field.paragraph.image_overlay_text_with_link.field_link
     - field.field.paragraph.image_overlay_text_with_link.field_title
@@ -15,6 +16,13 @@ targetEntityType: paragraph
 bundle: image_overlay_text_with_link
 mode: default
 content:
+  field_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_image:
     type: media_library_widget
     weight: 0

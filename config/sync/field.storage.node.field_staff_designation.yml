@@ -1,0 +1,20 @@
+uuid: 5cd67734-d1d1-47d7-aede-0b485ad5d08e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_staff_designation
+field_name: field_staff_designation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

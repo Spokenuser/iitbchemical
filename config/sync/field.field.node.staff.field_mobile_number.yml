@@ -1,0 +1,28 @@
+uuid: 598bfc50-76d0-4608-acc4-78181e69fb82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_number
+    - node.type.staff
+  module:
+    - telephone
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+      teaser: 0
+      teaser_page: 0
+id: node.staff.field_mobile_number
+field_name: field_mobile_number
+entity_type: node
+bundle: staff
+label: 'Mobile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone
