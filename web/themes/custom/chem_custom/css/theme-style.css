@@ -3128,6 +3128,9 @@ header.sticky {
   padding: 20px;
   align-items: center;
 }
+.thum-grid .curriculum a {
+  text-decoration: none;
+}
 .thum-grid .curriculum .img-box {
   height: auto;
   width: auto;
@@ -3151,6 +3154,9 @@ header.sticky {
   border-radius: 10px;
   padding: 20px;
   align-items: center;
+}
+.thum-grid .yellow a {
+  text-decoration: none;
 }
 .thum-grid .yellow .img-box {
   height: auto;
@@ -3176,6 +3182,9 @@ header.sticky {
   padding: 20px;
   align-items: center;
 }
+.thum-grid .black a {
+  text-decoration: none;
+}
 .thum-grid .black .img-box {
   height: auto;
   width: auto;
@@ -3199,6 +3208,9 @@ header.sticky {
   border-radius: 10px;
   padding: 20px;
   align-items: center;
+}
+.thum-grid .green a {
+  text-decoration: none;
 }
 .thum-grid .green .img-box {
   height: auto;
@@ -3224,6 +3236,9 @@ header.sticky {
   padding: 20px;
   align-items: center;
 }
+.thum-grid .light_green a {
+  text-decoration: none;
+}
 .thum-grid .light_green .img-box {
   height: auto;
   width: auto;
@@ -3247,6 +3262,9 @@ header.sticky {
   border-radius: 10px;
   padding: 20px;
   align-items: center;
+}
+.thum-grid .aquia a {
+  text-decoration: none;
 }
 .thum-grid .aquia .img-box {
   height: auto;
@@ -3272,6 +3290,9 @@ header.sticky {
   padding: 20px;
   align-items: center;
 }
+.thum-grid .light_purple a {
+  text-decoration: none;
+}
 .thum-grid .light_purple .img-box {
   height: auto;
   width: auto;
@@ -3295,6 +3316,9 @@ header.sticky {
   border-radius: 10px;
   padding: 20px;
   align-items: center;
+}
+.thum-grid .dark_purple a {
+  text-decoration: none;
 }
 .thum-grid .dark_purple .img-box {
   height: auto;
