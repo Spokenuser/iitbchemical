@@ -1,0 +1,45 @@
+uuid: 71aba942-a104-4887-8bb7-5fd698f06236
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_color
+field_name: field_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: curriculum
+      label: Red
+    -
+      value: yellow
+      label: Yellow
+    -
+      value: black
+      label: Black
+    -
+      value: green
+      label: Green
+    -
+      value: light_green
+      label: 'Light Green'
+    -
+      value: aquia
+      label: Aquia
+    -
+      value: light_purple
+      label: 'Light Purple'
+    -
+      value: dark_purple
+      label: 'Dark Purple'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

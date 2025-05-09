@@ -1,0 +1,26 @@
+uuid: 4fde44bc-c974-493e-a098-8485ee988ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.image_overlay_text_with_link
+  module:
+    - options
+    - view_mode_conditional_fields
+third_party_settings:
+  view_mode_conditional_fields:
+    field_visibility_display:
+      default: 0
+id: paragraph.image_overlay_text_with_link.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: image_overlay_text_with_link
+label: Color
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
