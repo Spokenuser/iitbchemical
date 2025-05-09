@@ -3120,6 +3120,134 @@ header.sticky {
   margin: 0px;
   color: #fff;
 }
+.thum-grid .curriculum {
+  background-color: #DB3E3E;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .curriculum .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .curriculum .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .yellow {
+  background-color: #E2A500;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .yellow .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .yellow .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .black {
+  background-color: #20252D;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .black .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .black .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .green {
+  background-color: #7CA333;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .green .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .green .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .light_green {
+  background-color: #4C935B;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .light_green .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .light_green .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .aquia {
+  background-color: #199EAA;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .aquia .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .aquia .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .light_purple {
+  background-color: #3F4974;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .light_purple .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .light_purple .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
+.thum-grid .dark_purple {
+  background-color: #573C56;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.thum-grid .dark_purple .img-box {
+  height: 50px;
+  width: 50px;
+}
+.thum-grid .dark_purple .caption {
+  position: relative !important;
+  background: none !important;
+  flex: 1;
+  padding: 0px !important;
+}
 
 .mission-statement-section .img-box img {
   max-width: 100%;
