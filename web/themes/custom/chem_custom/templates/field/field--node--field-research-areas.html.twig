@@ -1,92 +1,92 @@
 {#
-    /**
-     * @file
-     * Bartik theme override for taxonomy term fields.
-     *
-     * Available variables:
-     * - attributes: HTML attributes for the containing element.
-     * - label_hidden: Whether to show the field label or not.
-     * - title_attributes: HTML attributes for the label.
-     * - label: The label for the field.
-     * - content_attributes: HTML attributes for the content.
-     * - items: List of all the field items. Each item contains:
-     *   - attributes: List of HTML attributes for each item.
-     *   - content: The field item's content.
-     * - entity_type: The entity type to which the field belongs.
-     * - field_name: The name of the field.
-     * - field_type: The type of the field.
-     * - label_display: The display settings for the label.
-     *
-     * @see template_preprocess_field()
-     * @see bartik_preprocess_field()
-     */
-    #}
-    {%
-      set classes = [
-        'field',
-        'field--name-' ~ field_name|clean_class,
-        'field--type-' ~ field_type|clean_class,
-        'field--label-' ~ label_display,
-        'clearfix',
-      ]
-    %}
-    {%
-      set title_classes = [
-        'field__label',
-        label_display == 'inline' ? 'inline',
-      ]
-    %}
-    {#
-      This template splits research area taxonomy terms into:
-      - parent terms (no parent) — rendered with image/content
-      - child terms (with parent) — rendered as simple links
-    #}
-    
-    {% set parent_terms = [] %}
-    {% set child_terms = [] %}
-    
-    {# First pass: Separate parent and child terms #}
-    {% for item in items %}
-      {% set term = item.content['#entity'] %}
-      {% if term.parent.value.0.target_id %}
-        {% set child_terms = child_terms|merge([item]) %}
-      {% else %}
-        {% set parent_terms = parent_terms|merge([term]) %}
+  /**
+   * @file
+   * Bartik theme override for taxonomy term fields.
+   *
+   * Available variables:
+   * - attributes: HTML attributes for the containing element.
+   * - label_hidden: Whether to show the field label or not.
+   * - title_attributes: HTML attributes for the label.
+   * - label: The label for the field.
+   * - content_attributes: HTML attributes for the content.
+   * - items: List of all the field items. Each item contains:
+   *   - attributes: List of HTML attributes for each item.
+   *   - content: The field item's content.
+   * - entity_type: The entity type to which the field belongs.
+   * - field_name: The name of the field.
+   * - field_type: The type of the field.
+   * - label_display: The display settings for the label.
+   *
+   * @see template_preprocess_field()
+   * @see bartik_preprocess_field()
+   */
+  #}
+  {%
+    set classes = [
+      'field',
+      'field--name-' ~ field_name|clean_class,
+      'field--type-' ~ field_type|clean_class,
+      'field--label-' ~ label_display,
+      'clearfix',
+    ]
+  %}
+  {%
+    set title_classes = [
+      'field__label',
+      label_display == 'inline' ? 'inline',
+    ]
+  %}
+  {#
+    This template splits research area taxonomy terms into:
+    - parent terms (no parent) — rendered with image/content
+    - child terms (with parent) — rendered as simple links
+  #}
+  
+  {% set parent_terms = [] %}
+  {% set child_terms = [] %}
+  
+  {# First pass: Separate parent and child terms #}
+  {% for item in items %}
+    {% set term = item.content['#entity'] %}
+    {% if term.parent.value.0.target_id %}
+      {% set child_terms = child_terms|merge([item]) %}
+    {% else %}
+      {% set parent_terms = parent_terms|merge([item]) %}
+    {% endif %}
+  {% endfor %}
+  
+  <div{{ attributes.addClass(classes) }}>
+    <div class="research-area-grid">
+  
+      {% if not label_hidden %}
+        <h3{{ title_attributes.addClass(title_classes) }}>{{ label }}</h3>
       {% endif %}
-    {% endfor %}
-    
-    <div{{ attributes.addClass(classes) }}>
-      <div class="research-area-grid">
-    
-        {% if not label_hidden %}
-          <h3{{ title_attributes.addClass(title_classes) }}>{{ label }}</h3>
-        {% endif %}
-    
-        {# Render parent terms with image and content #}
-        {% if parent_terms %}
-          {% for item in parent_terms %}
-            <div class="item">
-              <div class="img-box">
-                <img src="{{ item.content['#entity'].field_image.entity.field_media_image.entity|file_url }}" class="img-fluid" alt="">
-                {{ item.content }}
-              </div>
+  
+      {# Render parent terms with image and content #}
+      {% if parent_terms %}
+        {% for item in parent_terms %}
+          <div class="item">
+            <div class="img-box">
+              <img src="{{ item.content['#entity'].field_image.entity.field_media_image.entity|file_url }}" class="img-fluid" alt="">
+              {{ item.content }}
             </div>
-          {% endfor %}
-        {% endif %}
-      </div>
-    
-      {# Render child terms as links #}
-      {% if child_terms %}
-        <div class="child-research-areas">
-          <h4{{ title_attributes.addClass(title_classes) }}>Sub Areas</h4>
-          <ul>
-            {% for term in child_terms %}
-              <li class="item">
-                  {{ term.content['#title'] }}
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+          </div>
+        {% endfor %}
       {% endif %}
     </div>
-    
+  
+    {# Render child terms as links #}
+    {% if child_terms %}
+      <div class="child-research-areas">
+        <h4{{ title_attributes.addClass(title_classes) }}>Sub Areas</h4>
+        <ul>
+          {% for term in child_terms %}
+            <li class="item">
+                {{ term.content['#title'] }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+  
