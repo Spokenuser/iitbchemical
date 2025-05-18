@@ -36,19 +36,57 @@
         label_display == 'inline' ? 'inline',
       ]
     %}
+    {#
+      This template splits research area taxonomy terms into:
+      - parent terms (no parent) — rendered with image/content
+      - child terms (with parent) — rendered as simple links
+    #}
+    
+    {% set parent_terms = [] %}
+    {% set child_terms = [] %}
+    
+    {# First pass: Separate parent and child terms #}
+    {% for item in items %}
+      {% set term = item.content['#entity'] %}
+      {% if term.parent.value.0.target_id %}
+        {% set child_terms = child_terms|merge([item]) %}
+      {% else %}
+        {% set parent_terms = parent_terms|merge([term]) %}
+      {% endif %}
+    {% endfor %}
+    
     <div{{ attributes.addClass(classes) }}>
-      <div class='research-area-grid'>
+      <div class="research-area-grid">
+    
         {% if not label_hidden %}
           <h3{{ title_attributes.addClass(title_classes) }}>{{ label }}</h3>
         {% endif %}
-        {% for item in items %}
-        <div class="item">
-            <div class="img-box">
+    
+        {# Render parent terms with image and content #}
+        {% if parent_terms %}
+          {% for item in parent_terms %}
+            <div class="item">
+              <div class="img-box">
                 <img src="{{ item.content['#entity'].field_image.entity.field_media_image.entity|file_url }}" class="img-fluid" alt="">
                 {{ item.content }}
+              </div>
             </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    
+      {# Render child terms as links #}
+      {% if child_terms %}
+        <div class="child-research-areas">
+          <h4{{ title_attributes.addClass(title_classes) }}>Sub Areas</h4>
+          <ul>
+            {% for term in child_terms %}
+              <li class="item">
+                  {{ term.content['#title'] }}
+              </li>
+            {% endfor %}
+          </ul>
         </div>
-        {% endfor %}
-    </div>
+      {% endif %}
     </div>
     
