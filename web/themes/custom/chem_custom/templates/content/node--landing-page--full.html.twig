@@ -96,7 +96,7 @@
       </header>
       <div{{ content_attributes.addClass('node__content', 'clearfix', 'landing-page') }}>
         {# Grid of image cards #}
-        {% if content.field_image_text_with_link %}
+        {% if content.field_image_text_with_link.0 %}
         <div class="thum-grid {{ content.field_column_style.0['#markup'] }}  {{ content.field_card_display_style.0['#markup'] }}">
           
           {% for item in content.field_image_text_with_link %}
