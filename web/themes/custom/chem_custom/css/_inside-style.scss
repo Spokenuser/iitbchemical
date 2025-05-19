@@ -61,6 +61,15 @@
             grid-template-columns: repeat(4, 1fr);
         }
 
+        h3{
+            grid-column: 1 / -1;
+            font-family: f.$roboto-bold;
+            background-color: c.$iitbc-primary-color;
+            color: c.$iitbc-white;
+            margin-bottom: 0px;
+            padding: 7px 0px;
+        }
+
         .views-row {
             padding: 0px;
 
@@ -1260,7 +1269,7 @@
 
 .mission-statement-section {
     .img-box {
-        img {
+        img {   
             max-width: 100%;
         }
     }

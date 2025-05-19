@@ -88,10 +88,18 @@
 
     }
 }
+.research-section-heading{
+    @include padding-left-right();
+    @include padding-top-bottom();
+    h2 {
+        @include section-heading(c.$iitbc-primary-color, left, 0px, c.$iitbc-secondary-color);
+    }
+}
 
 .research-section {
     @include padding-left-right();
     @include padding-top-bottom();
+    padding-top: 0px !important;
     background-color: c.$iitbc-white;
 
     .research-grid {
@@ -105,24 +113,12 @@
         }
 
         @include mymedia(1298px) {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 50px;
         }
 
         .block-layout-builder {
-            &:nth-child(1) {
-                display: flex;
-                align-items: center;
-
-                .content {
-                    border-radius: 0px;
-                }
-
-                h2 {
-                    @include section-heading(c.$iitbc-primary-color, left, 0px, c.$iitbc-secondary-color);
-                }
-            }
-
+           
             .content {
                 border-radius: 10px;
                 border: 0px;
@@ -138,6 +134,9 @@
                         filter: grayscale(80%);
                     }
                 }
+                a{
+                    text-decoration: none;
+                }
 
                 .field--name-field-title {
                     background-color: c.$iitbc-primary-color;
@@ -152,6 +151,9 @@
                     overflow: hidden; // Prevents overflow outside the card footer
                     transition: all 0.5s ease-in-out;
                     height: 93px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
 
