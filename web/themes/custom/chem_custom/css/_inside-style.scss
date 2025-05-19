@@ -49,6 +49,13 @@
         margin: 0px;
         margin-top: 40px;
 
+        &:first-child{
+            margin-top: 0px;
+        }
+        &:last-child{
+            margin-bottom: 0px;
+        }
+
         @include mymedia(767px) {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -67,7 +74,7 @@
             background-color: c.$iitbc-primary-color;
             color: c.$iitbc-white;
             margin-bottom: 0px;
-            padding: 7px 0px;
+            padding: 7px 10px;
         }
 
         .views-row {
@@ -486,7 +493,34 @@
                         }
                     }
                 }
+                .child-research-areas{
+                    padding-top: 40px;
+                    h4{
+                        margin-bottom: 15px;
+                        font-size: 1.5rem;
+                        font-family: f.$roboto-medium;
+                        border-bottom: #cfcfcf 2px solid;
+                    }
+                    ul{
+                        @include unorder-list();
+                        li{
+                            padding: 5px 0px;
+                            display: flex;
+                            gap: 10px;
+                            &::before{
+                                content: "\f133";
+                                font-family: bootstrap-icons !important;
+                                color: #89b8e7;
+                            }
+
+                            a{
+                                color: c.$iitbc-secondary-color;
+                            }
+                        }
+                    }
+                }
             }
+
         }
     }
 
@@ -538,6 +572,36 @@
                         border-bottom: 0px;
                     }
                 }
+            }
+        }
+    }
+    .selected-publications-section{
+        @include padding-left-right();
+        @include padding-top-bottom();
+        background: #f1f1f1;
+        .container-fluid {
+            h3 {
+                font-size: 2.3rem;
+                margin-bottom: 25px;
+            }
+
+            .education-list{
+               ul{
+                @include unorder-list();
+                .field__item {
+                    padding: 12px 0px;
+                    display: flex;
+                    gap: 10px;
+                    border-bottom: 1px solid #ccc;
+                    &:last-child{
+                        border-bottom: 0px;
+                    }
+                    a {
+                        color: c.$iitbc-secondary-color;
+                        text-decoration: none;
+                    }
+                }
+               }
             }
         }
     }

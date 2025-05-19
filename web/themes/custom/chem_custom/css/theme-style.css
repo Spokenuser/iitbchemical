@@ -2215,6 +2215,12 @@ header.sticky {
   margin: 0px;
   margin-top: 40px;
 }
+.view-faculty-listing .view-content:first-child {
+  margin-top: 0px;
+}
+.view-faculty-listing .view-content:last-child {
+  margin-bottom: 0px;
+}
 @media (min-width: 767px) {
   .view-faculty-listing .view-content {
     grid-template-columns: repeat(2, 1fr);
@@ -2236,7 +2242,7 @@ header.sticky {
   background-color: rgb(0, 79, 159);
   color: rgb(255, 255, 255);
   margin-bottom: 0px;
-  padding: 7px 0px;
+  padding: 7px 10px;
 }
 .view-faculty-listing .view-content .views-row {
   padding: 0px;
@@ -2673,6 +2679,33 @@ header.sticky {
 .faculty-details-section .fac-research-section .container-fluid .research-area .research-area-grid .item:hover .img-box img {
   transform: scale(1.2);
 }
+.faculty-details-section .fac-research-section .container-fluid .research-area .child-research-areas {
+  padding-top: 40px;
+}
+.faculty-details-section .fac-research-section .container-fluid .research-area .child-research-areas h4 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-family: "Roboto-Medium";
+  border-bottom: #cfcfcf 2px solid;
+}
+.faculty-details-section .fac-research-section .container-fluid .research-area .child-research-areas ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.faculty-details-section .fac-research-section .container-fluid .research-area .child-research-areas ul li {
+  padding: 5px 0px;
+  display: flex;
+  gap: 10px;
+}
+.faculty-details-section .fac-research-section .container-fluid .research-area .child-research-areas ul li::before {
+  content: "\f133";
+  font-family: bootstrap-icons !important;
+  color: #89b8e7;
+}
+.faculty-details-section .fac-research-section .container-fluid .research-area .child-research-areas ul li a {
+  color: rgb(192, 224, 89);
+}
 .faculty-details-section .award-section {
   padding-left: 0px;
   padding-right: 0px;
@@ -2750,6 +2783,65 @@ header.sticky {
 .faculty-details-section .award-section .container-fluid .awars-list .field__item:last-child {
   padding-bottom: 0px;
   border-bottom: 0px;
+}
+.faculty-details-section .selected-publications-section {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #f1f1f1;
+}
+@media (min-width: 1024px) {
+  .faculty-details-section .selected-publications-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1360px) {
+  .faculty-details-section .selected-publications-section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1680px) {
+  .faculty-details-section .selected-publications-section {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (min-width: 1360px) {
+  .faculty-details-section .selected-publications-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 1600px) {
+  .faculty-details-section .selected-publications-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+.faculty-details-section .selected-publications-section .container-fluid h3 {
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+}
+.faculty-details-section .selected-publications-section .container-fluid .education-list ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.faculty-details-section .selected-publications-section .container-fluid .education-list ul .field__item {
+  padding: 12px 0px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.faculty-details-section .selected-publications-section .container-fluid .education-list ul .field__item:last-child {
+  border-bottom: 0px;
+}
+.faculty-details-section .selected-publications-section .container-fluid .education-list ul .field__item a {
+  color: rgb(192, 224, 89);
+  text-decoration: none;
 }
 
 .announcement-listing-page .list-annocuement .views-row {
