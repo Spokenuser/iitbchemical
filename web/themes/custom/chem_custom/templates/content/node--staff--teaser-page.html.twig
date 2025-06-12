@@ -78,7 +78,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
         <img src="{{ file_url(content.field_photo['#items'].entity.field_media_image.entity|file_url) }}" class="w-100" alt="{{ label.0['#context'].value }}">
     </div>
     <div class="body">
-        <h5><a href="{{ url }}" rel="bookmark">{{ label }}</a> <small>{{ content.field_designation }}</small> </h5>
+        <h5><a href="{{ url }}" rel="bookmark">{{ label }}</a> <small>{{ content.field_staff_designation }}</small> </h5>
         <div class="contact-info-list">
             <ul>
                 {% if content.field_mobile_number.0 is not empty %}
