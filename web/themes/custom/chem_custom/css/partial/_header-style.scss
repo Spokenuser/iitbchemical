@@ -40,6 +40,9 @@ header {
                 width: auto;
                 gap: 0px;
             }
+            #navbar-main{
+                background-color: transparent !important;
+            }
 
             .input-group {
                 @include mymedia(1024px) {

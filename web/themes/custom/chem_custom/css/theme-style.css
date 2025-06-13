@@ -1031,6 +1031,9 @@ header .container-fluid .nav-container {
     gap: 0px;
   }
 }
+header .container-fluid .nav-container #navbar-main {
+  background-color: transparent !important;
+}
 @media (min-width: 1024px) {
   header .container-fluid .nav-container .input-group {
     width: 300px;
