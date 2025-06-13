@@ -75,36 +75,50 @@
         <div class="container-fluid">
           <a href="{{ front_page }}" class="logo"><img src="/themes/custom/chem_custom/assets/images/logo.svg"
               class="img-fluid" alt=""></a>
-          {% if page.primary_menu or page.header_form %}
-            <div class="nav-container">
-            <div class="input-group mt-3" style="">
-              <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-              <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
-            </div>
+        {% if page.header or page.primary_menu or page.header_form %}
+        <div class="nav-container">
+        <div class="input-group mt-3" style="">
+          <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+        </div>
+        <nav{{ navbar_attributes }}>
+          {% if container_navbar %}
+          <div class="container">
+          {% endif %}
+            {{ page.header }}
+            {% if page.primary_menu or page.header_form %}
             <div class="navigation-box">
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="{{ navbar_collapse_class }}" id="CollapsingNavbar">
+              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="{{ navbar_collapse_class }}" id="CollapsingNavbar">
+                {% if navbar_offcanvas %}
+                  <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                {% endif %}
                 <a href="{{ front_page }}" class="home-icon"><i class="bi bi-house-door"></i></a>
-                  {% if navbar_offcanvas %}
-                    <div class="offcanvas-header">
-                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                  {% endif %}
-                  {{ page.primary_menu }}
-                  {% if page.header_form %}
-                    <div class="form-inline navbar-form justify-content-end">
-                      {{ page.header_form }}
-                    </div>
-                  {% endif %}
-                  {% if navbar_offcanvas %}
-                    </div>
-                  {% endif %}
-                </div>
-                </div>
-                </div>
-              {% endif %}
+                {{ page.primary_menu }}
+                {% if page.header_form %}
+                  <div class="form-inline navbar-form justify-content-end">
+                    {{ page.header_form }}
+                  </div>
+                {% endif %}
+                {% if navbar_offcanvas %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if sidebar_collapse %}
+              <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
+            {% endif %}
+          {% if container_navbar %}
+        </div>
+          </div>
+          {% endif %}
+        </nav>
+      </div>
+      {% endif %}
         </div>
       </header>
       <section class="hero-video-section">
