@@ -32,15 +32,17 @@ header {
         .nav-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+
             width: 100%;
             gap: 15px;
 
             @include mymedia(1024px) {
                 width: auto;
                 gap: 0px;
+                align-items: flex-end;
             }
-            #navbar-main{
+
+            #navbar-main {
                 background-color: transparent !important;
             }
 
@@ -79,9 +81,24 @@ header {
 
             .navigation-box {
                 display: flex;
-                gap: 15px;
-                align-items: center;
+              
                 width: 100%;
+                flex-direction: column;
+                align-items: flex-end;
+
+                @include mymedia(1300px) {
+                    flex-direction: row;
+                      gap: 15px;
+                }
+
+                button {
+                    border: 1px solid #fff;
+
+                    .navbar-toggler-icon {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                    }
+
+                }
 
                 .home-icon {
                     color: c.$iitbc-white;
@@ -93,23 +110,40 @@ header {
             }
         }
 
+        .navbar-collapse {
+            width: 100%;
+        }
+
         .navbar-nav {
-            gap: 25px;
-            flex-direction: row !important;
+
+            flex-direction: column !important;
+
+            @include mymedia(1300px) {
+                flex-direction: row !important;
+                gap: 25px;
+            }
 
             li {
                 padding: 10px 0px;
-
+                border-bottom: 1px solid  #ccc;
+                &:last-child{
+                    border-bottom: 0px;
+                }
+                @include mymedia(1300px){
+                    border: 0px;
+                }
                 a {
                     color: #fff;
                     text-decoration: none;
-                    &.show, &.active {
+
+                    &.show,
+                    &.active {
                         color: c.$iitbc-secondary-color;
                     }
                 }
 
                 &:hover,
-               
+
                 &:focus,
                 &.show {
                     a {
