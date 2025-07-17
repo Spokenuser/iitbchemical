@@ -2209,6 +2209,10 @@ header.sticky {
   padding: 5px 0px;
 }
 
+.ff {
+  height: 20px;
+}
+
 .inside-body-start {
   padding-left: 0px;
   padding-right: 0px;
