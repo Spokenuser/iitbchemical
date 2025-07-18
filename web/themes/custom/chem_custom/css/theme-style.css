@@ -1036,7 +1036,7 @@ header .container-fluid .nav-container #navbar-main {
 }
 header .container-fluid .nav-container .container {
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-end;
 }
 header .container-fluid .nav-container .container .js-form-item, header .container-fluid .nav-container .container .form-actions {
   margin: 0px !important;
@@ -3574,6 +3574,7 @@ header.sticky {
 }
 .search-result-block .view-content .views-row:last-child {
   padding-bottom: 0px;
+  border-bottom: 0px;
 }
 .search-result-block .view-content .views-row .views-field-title-1 a {
   color: rgb(0, 79, 159);
