@@ -25,14 +25,13 @@ header {
             }
 
             @include mymedia(1400px) {
-                width: 30%;
+                width: 25%;
             }
         }
 
         .nav-container {
             display: flex;
             flex-direction: column;
-
             width: 100%;
             gap: 15px;
 
@@ -44,6 +43,14 @@ header {
 
             #navbar-main {
                 background-color: transparent !important;
+            }
+            .container{
+                flex-direction: column;
+                justify-content: space-between;
+
+                .js-form-item,.form-actions{
+                    margin: 0px !important;
+                }
             }
 
             .input-group {

@@ -1015,7 +1015,7 @@ header .container-fluid .logo {
 }
 @media (min-width: 1400px) {
   header .container-fluid .logo {
-    width: 30%;
+    width: 25%;
   }
 }
 header .container-fluid .nav-container {
@@ -1033,6 +1033,13 @@ header .container-fluid .nav-container {
 }
 header .container-fluid .nav-container #navbar-main {
   background-color: transparent !important;
+}
+header .container-fluid .nav-container .container {
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .container-fluid .nav-container .container .js-form-item, header .container-fluid .nav-container .container .form-actions {
+  margin: 0px !important;
 }
 @media (min-width: 1024px) {
   header .container-fluid .nav-container .input-group {
