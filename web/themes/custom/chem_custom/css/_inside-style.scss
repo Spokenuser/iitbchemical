@@ -49,10 +49,11 @@
         margin: 0px;
         margin-top: 40px;
 
-        &:first-child{
+        &:first-child {
             margin-top: 0px;
         }
-        &:last-child{
+
+        &:last-child {
             margin-bottom: 0px;
         }
 
@@ -68,7 +69,7 @@
             grid-template-columns: repeat(4, 1fr);
         }
 
-        h3{
+        h3 {
             grid-column: 1 / -1;
             font-family: f.$roboto-bold;
             background-color: c.$iitbc-primary-color;
@@ -493,27 +494,32 @@
                         }
                     }
                 }
-                .child-research-areas{
+
+                .child-research-areas {
                     padding-top: 40px;
-                    h4{
+
+                    h4 {
                         margin-bottom: 15px;
                         font-size: 1.5rem;
                         font-family: f.$roboto-medium;
                         border-bottom: #cfcfcf 2px solid;
                     }
-                    ul{
+
+                    ul {
                         @include unorder-list();
-                        li{
+
+                        li {
                             padding: 5px 0px;
                             display: flex;
                             gap: 10px;
-                            &::before{
+
+                            &::before {
                                 content: "\f133";
                                 font-family: bootstrap-icons !important;
                                 color: #89b8e7;
                             }
 
-                            a{
+                            a {
                                 color: c.$iitbc-secondary-color;
                             }
                         }
@@ -575,33 +581,38 @@
             }
         }
     }
-    .selected-publications-section{
+
+    .selected-publications-section {
         @include padding-left-right();
         @include padding-top-bottom();
         background: #f1f1f1;
+
         .container-fluid {
             h3 {
                 font-size: 2.3rem;
                 margin-bottom: 25px;
             }
 
-            .education-list{
-               ul{
-                @include unorder-list();
-                .field__item {
-                    padding: 12px 0px;
-                    display: flex;
-                    gap: 10px;
-                    border-bottom: 1px solid #ccc;
-                    &:last-child{
-                        border-bottom: 0px;
-                    }
-                    a {
-                        color: c.$iitbc-secondary-color;
-                        text-decoration: none;
+            .education-list {
+                ul {
+                    @include unorder-list();
+
+                    .field__item {
+                        padding: 12px 0px;
+                        display: flex;
+                        gap: 10px;
+                        border-bottom: 1px solid #ccc;
+
+                        &:last-child {
+                            border-bottom: 0px;
+                        }
+
+                        a {
+                            color: c.$iitbc-secondary-color;
+                            text-decoration: none;
+                        }
                     }
                 }
-               }
             }
         }
     }
@@ -1076,7 +1087,8 @@
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
 
@@ -1091,18 +1103,20 @@
             flex: 1;
             padding: 0px !important;
 
-            h3{
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
+
     .yellow {
         background-color: #E2A500;
         display: flex;
@@ -1110,9 +1124,11 @@
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1123,28 +1139,33 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    .black{
+
+    .black {
         background-color: #20252D;
         display: flex;
         gap: 10px;
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1155,28 +1176,33 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    .green{
+
+    .green {
         background-color: #7CA333;
         display: flex;
         gap: 10px;
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1187,28 +1213,33 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    .light_green{
+
+    .light_green {
         background-color: #4C935B;
         display: flex;
         gap: 10px;
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1219,28 +1250,33 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    .aquia{
+
+    .aquia {
         background-color: #199EAA;
         display: flex;
         gap: 10px;
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1251,28 +1287,33 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    .light_purple{
+
+    .light_purple {
         background-color: #3F4974;
         display: flex;
         gap: 10px;
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1283,28 +1324,33 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    .dark_purple{
+
+    .dark_purple {
         background-color: #573C56;
         display: flex;
         gap: 10px;
         border-radius: 10px;
         padding: 20px;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
         }
+
         .img-box {
             height: auto;
             width: auto;
@@ -1315,26 +1361,65 @@
             background: none !important;
             flex: 1;
             padding: 0px !important;
-            h3{
+
+            h3 {
                 margin: 0px;
             }
         }
-        &:hover{
-            .img-box{
-                img{
-                    transform:none;
+
+        &:hover {
+            .img-box {
+                img {
+                    transform: none;
                 }
             }
         }
     }
-    
+
 
 }
 
 .mission-statement-section {
     .img-box {
-        img {   
+        img {
             max-width: 100%;
+        }
+    }
+}
+
+.search-result-block {
+    .view-content {
+        .views-row {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0px;
+
+            &:first-child {
+                padding-top: 0px;
+            }
+
+            &:last-child {
+                padding-bottom: 0px;
+            }
+
+            .views-field-title-1 {
+                a {
+                    color: c.$iitbc-primary-color;
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .more-link {
+                a {
+                    text-decoration: none;
+                    border: 1px solid #0d6efd;
+                    text-decoration: none;
+                    padding: 3px 15px;
+                    display: inline-flex;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                }
+            }
         }
     }
 }
