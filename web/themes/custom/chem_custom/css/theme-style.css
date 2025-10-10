@@ -28,6 +28,11 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .top-bg-section {
   background-image: url(../images/top-bg.svg);
   background-repeat: no-repeat;
@@ -1861,6 +1866,7 @@ header.sticky {
 }
 .events-section .events-grid .list-annocuement .field-content .img-box img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 @media (min-width: 600px) {
@@ -2034,9 +2040,12 @@ header.sticky {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  height: 420px;
 }
 .research-slider-section .research-slider-grid .view-content .item .img-box .field--type-entity-reference {
   margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 .research-slider-section .research-slider-grid .view-content .item .img-box img {
   transition: all 0.5s;

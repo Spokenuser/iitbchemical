@@ -109,10 +109,10 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                     </ul>
                 </div>
                 {% endif %}
-                {% if content.field_link_to_detail_page %}
+                {% if content.field_link_to_detail_page.0['#url'].uri %}
                 <div class="others-links">
                     <ul>
-                        <li><a href="{{ content.field_link_to_detail_page.uri }}">Detailed Information/Research Group Web-Page</a></li>
+                        <li><a href="{{ content.field_link_to_detail_page.0['#url'].uri }}">Detailed Information/Research Group Web-Page</a></li>
                     </ul>
                 </div>
                 {% endif %}
